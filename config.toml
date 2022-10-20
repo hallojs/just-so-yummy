@@ -1,0 +1,4 @@
+baseURL = 'https://just-so-jummy.de'
+languageCode = 'de-de'
+title = 'just-so-yummy'
+theme = "etch"
