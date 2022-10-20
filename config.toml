@@ -1,4 +1,4 @@
-baseURL = 'http://just-so-yummy.de/'
+baseURL = 'www.just-so-yummy.de/'
 languageCode = 'de-de'
 title = 'just-so-yummy'
 theme = "etch"
