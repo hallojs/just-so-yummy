@@ -1,4 +1,7 @@
 baseURL = 'http://just-so-yummy.de/'
 languageCode = 'de-de'
-title = 'just-so-yummy'
+title = 'Rezepte'
 theme = "etch"
+
+[permalinks]
+  posts = "/:title/"
