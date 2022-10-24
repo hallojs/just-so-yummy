@@ -3,5 +3,11 @@ languageCode = 'de-de'
 title = 'Rezepte'
 theme = "etch"
 
+[params]
+  description = "My yummy recipes"
+  contact = "Contact: Jonas Sander, jonas.sander(at)t-online.de"
+  dark = "auto"
+  highlight = true
+
 [permalinks]
   posts = "/:title/"
