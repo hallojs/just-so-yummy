@@ -22,3 +22,5 @@ Menge für eine mittelgroße Schüssel.
 2. Die Pinienkerne in einer Pfanne bei niedriger bis mittlerer Hitze goldbraun anbraten.
 3. Die Frühlingszwiebeln in feine Scheiben schneiden und mit den Tomatenstreifen, dem Rucola, den Pinienkernen und dem Oregano zur Pasta geben. 
 4. Für das Dressing Olivenöl, gepressten Knoblauch, Chili und Pfeffer vermengen und unter den Salat heben.
+
+Guten Appetit!
