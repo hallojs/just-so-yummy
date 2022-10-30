@@ -3,7 +3,7 @@ title: "Gemüse im Wok"
 draft: false
 ---
 
-Die Menge reicht mit ausreichen Nudeln oder Reis für bis zu 5 Personen.
+Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.
 
 **Zutaten:**
 - Ein Streifen Schweinefilet
