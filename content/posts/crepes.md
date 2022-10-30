@@ -22,3 +22,5 @@ Die Menge reicht für etwa 3 hungrige Personen.
 3. Die Crêpes mit Butter in einer Pfanne ausbacken.
 
 Guten Appetit!
+
+PS: Die Pfanne ist noch heiß... einen Apfel in kleine Spalten schneiden und mit Vanillezucker (und Zimt) in Butter schwenken.
