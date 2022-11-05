@@ -1,0 +1,29 @@
+---
+title: "Kartoffelgratin"
+draft: false
+---
+
+Die Menge reicht für eine mittelgroße bis große Auflaufform.
+
+**Zutaten:**
+- 1200g festkochende Kartoffeln
+- 1 Knoblauchzehen
+- 200ml Sahne
+- 550ml Frische Vollmilch
+- 1 1/2EL Gemüsebrühe
+- Butter
+- Muskat
+- Salz
+- Pfeffer
+
+**Zubereitung:**
+
+1. Auflaufform mit Butter ausstreichen.
+2. Knoblauch schälen und in feine Würfel gehackt gleichmäßig in der Auflaufform verteilen.
+3. Kartoffeln schälen und mit einem Gemüsehobel in feine Scheiben hobeln.
+4. Die Kartoffeln in der Form aufschichten und nach jeder Schicht mit Salz und Muskat würzen.
+5. Die Sahne und die Milch zu einer Soße mischen und mit der Gemüsebrühe und Muskat, Salz und Pfeffer würzen.
+6. Die aufgeschichteten Kartoffeln gleichmäßig mit der Soße übergießen. Die Kartoffeln sollten vollständig von der Soße abgedeckt sein, sonst kann Milch nachgegossen werden.
+7. Das Gratin bei 180°C für etwa eine Stunde in den Ofen geben. Die Backzeit kann je nach Dicke der Kartoffelscheiben variieren (Gabeltest).
+
+Guten Appetit!
