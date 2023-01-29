@@ -1,5 +1,5 @@
 ---
-title: "Sylvester Salat"
+title: "Silvester Salat"
 draft: false
 ---
 
