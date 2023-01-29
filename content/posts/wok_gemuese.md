@@ -14,6 +14,7 @@ Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.
 - Ein Kopf Brokkoli
 - Erdnussöl
 - 350ml Hühnerbrühe (oder Gemüsebrühe)
+- Eine handvoll Erdnüsse
 - Reis oder Nudeln
 - Gewürze
 	- Paprika
@@ -28,7 +29,7 @@ Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.
 1. Die Karotten stifteln und zusammen mit einer gehackten Zwiebel in Erdnussöl dünsten.
 2. Nun die Bambussprossen und Sojabohnenkeimlinge ergänzen und im Wok köcheln lassen.
 3. Brokkoli in kleine Röschen schneiden und ebenfalls in den Wok geben.
-4. Sobald die Brokkoli-Röschen die gewünschte feste haben, die Soße aus der Pfanne unterrühren.
+4. Sobald die Brokkoli-Röschen die gewünschte Feste haben, die Soße aus der Pfanne unterrühren und die Erdnüsse ergänzen.
 5. Mit Reis oder Nudeln servieren.
 
 **Zubereitung Soße (zusätzlich Pfanne):**
