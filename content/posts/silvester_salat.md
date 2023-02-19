@@ -16,6 +16,7 @@ Die Menge reicht für eine mittelgroße bis große Schüssel.
 - 4EL süßes Fruchtessig (z.B Himbeeressig)
 - 8EL Olivenöl
 - 1EL mittelscharfen Senf
+- Etwas Salz und Pfeffer
 
 **Zubereitung:**
 1. Den Feldsalat waschen und trocken schleudern.
