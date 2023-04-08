@@ -1,11 +1,19 @@
 ---
-title: "Kartoffelgratin"
+title: "Sanftgegarte Schweinemedaillons an Kartoffelgratin"
 draft: false
 ---
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.
 
-**Zutaten:**
+**Zutaten für die Medaillons:**
+- 700g Schweinefilet
+- 40ml Wasser
+- 300ml Kochsahne
+- Estragon
+- Salz
+- Pfeffer
+
+**Zutaten für Gratin:**
 - 1200g festkochende Kartoffeln
 - 1 Knoblauchzehen
 - 200ml Sahne
@@ -16,8 +24,15 @@ Die Menge reicht für eine mittelgroße bis große Auflaufform.
 - Salz
 - Pfeffer
 
-**Zubereitung:**
+**Zubereitung der Medaillons:**
+1. Das Schweinefilet im Ganzen scharf von allen Seiten in wenig Öl (hoch erhitzbar) in einer Edelstallpfanne anbraten.
+2. Das Schweinefilet auf einer Servierplatte bei 100°C Ober-/Unterhitze im Backofen etwa 50 Minuten sanftgaren.
+3. Das Wasser in die heiße Pfanne geben und mit einem Kochlöffel die Bratreste lösen.
+4. Die Kochsahne hinzugeben und nach Geschmack mit Estragon, Salz und Pfeffer würzen.
+5. Das Schweinefilet aus dem Ofen nehmen und in etwa 4cm dicke Medaillons schneiden.
+6. Die Sauce in eine Sauciere geben und zu den Medaillons servieren.
 
+**Zubereitung des Gratins:**
 1. Auflaufform mit Butter ausstreichen.
 2. Knoblauch schälen und in feine Würfel gehackt gleichmäßig in der Auflaufform verteilen.
 3. Kartoffeln schälen und mit einem Gemüsehobel in feine Scheiben hobeln.
