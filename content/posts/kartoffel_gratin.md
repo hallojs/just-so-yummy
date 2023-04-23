@@ -1,5 +1,5 @@
 ---
-title: "Sanftgegarte Schweinemedaillons an Kartoffelgratin"
+title: "Sanft gegarte Schweinemedaillons an Kartoffelgratin"
 draft: false
 ---
 
