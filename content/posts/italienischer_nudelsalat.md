@@ -14,7 +14,7 @@ Menge für eine mittelgroße Schüssel.
 - 50ml Olivenöl
 - 1 Knoblauchzehe
 - 3 Frühlingszwiebeln
-- 1/2TL Chilli
+- 1/2TL Chili
 - 2 Messerspitzen Pfeffer
 
 **Zubereitung:**

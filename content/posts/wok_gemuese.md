@@ -14,7 +14,7 @@ Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.
 - Ein Kopf Brokkoli
 - Erdnussöl
 - 350ml Hühnerbrühe (oder Gemüsebrühe)
-- Eine handvoll Erdnüsse
+- Eine Handvoll Erdnüsse
 - Reis oder Nudeln
 - Gewürze
 	- Paprika

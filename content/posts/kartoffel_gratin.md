@@ -25,8 +25,8 @@ Die Menge reicht für eine mittelgroße bis große Auflaufform.
 - Pfeffer
 
 **Zubereitung der Medaillons:**
-1. Das Schweinefilet im Ganzen scharf von allen Seiten in wenig Öl (hoch erhitzbar) in einer Edelstallpfanne anbraten.
-2. Das Schweinefilet auf einer Servierplatte bei 100°C Ober-/Unterhitze im Backofen etwa 50 Minuten sanftgaren.
+1. Das Schweinefilet im Ganzen scharf von allen Seiten in wenig Öl (hoch erhitzbar) in einer Edelstahlpfanne anbraten.
+2. Das Schweinefilet auf einer Servierplatte bei 100°C Ober-/Unterhitze im Backofen etwa 50 Minuten sanft garen.
 3. Das Wasser in die heiße Pfanne geben und mit einem Kochlöffel die Bratreste lösen.
 4. Die Kochsahne hinzugeben und nach Geschmack mit Estragon, Salz und Pfeffer würzen.
 5. Das Schweinefilet aus dem Ofen nehmen und in etwa 4cm dicke Medaillons schneiden.
