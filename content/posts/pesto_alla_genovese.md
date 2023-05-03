@@ -1,5 +1,5 @@
 ---
-title: "Pesto alle Genovese"
+title: "Pesto alla Genovese"
 draft: false
 ---
 
