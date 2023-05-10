@@ -5,7 +5,7 @@ draft: false
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.
 
-**Zutaten für die Medaillons:**
+# Zutaten für die Medaillons
 - 700g Schweinefilet
 - 40ml Wasser
 - 300ml Kochsahne
@@ -13,7 +13,7 @@ Die Menge reicht für eine mittelgroße bis große Auflaufform.
 - Salz
 - Pfeffer
 
-**Zutaten für Gratin:**
+# Zutaten für das Gratin
 - 1200g festkochende Kartoffeln
 - 1 Knoblauchzehen
 - 200ml Sahne
@@ -24,7 +24,7 @@ Die Menge reicht für eine mittelgroße bis große Auflaufform.
 - Salz
 - Pfeffer
 
-**Zubereitung der Medaillons:**
+# Zubereitung der Medaillons
 1. Das Schweinefilet im Ganzen scharf von allen Seiten in wenig Öl (hoch erhitzbar) in einer Edelstahlpfanne anbraten.
 2. Das Schweinefilet auf einer Servierplatte bei 100°C Ober-/Unterhitze im Backofen etwa 50 Minuten sanft garen.
 3. Das Wasser in die heiße Pfanne geben und mit einem Kochlöffel die Bratreste lösen.
@@ -32,7 +32,7 @@ Die Menge reicht für eine mittelgroße bis große Auflaufform.
 5. Das Schweinefilet aus dem Ofen nehmen und in etwa 4cm dicke Medaillons schneiden.
 6. Die Sauce in eine Sauciere geben und zu den Medaillons servieren.
 
-**Zubereitung des Gratins:**
+# Zubereitung des Gratins
 1. Auflaufform mit Butter ausstreichen.
 2. Knoblauch schälen und in feine Würfel gehackt gleichmäßig in der Auflaufform verteilen.
 3. Kartoffeln schälen und mit einem Gemüsehobel in feine Scheiben hobeln.

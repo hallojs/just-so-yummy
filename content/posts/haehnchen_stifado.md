@@ -5,7 +5,7 @@ draft: false
 
 Die Menge reicht für 5-6 Portionen.
 
-**Zutaten:**
+# Zutaten
 - 400g Zwiebeln
 - 700g Hähnchenbrustfilet
 - Getrockneter Rosmarin
@@ -18,7 +18,7 @@ Die Menge reicht für 5-6 Portionen.
 - 2 Knoblauchzehen (optional)
 
 
-**Zubereitung:**
+# Zubereitung
 1. Das Fleisch in mundgerechte Würfel schneiden und mit dem Öl in einem Schmortopf unter einem Deckel braun anbraten.
 2. Die Zwiebeln in grobe, den Knoblauch in feine Würfel schneiden und zum Fleisch geben.
 3. Das Tomatenmark hinzugeben und kurz mit anbraten.

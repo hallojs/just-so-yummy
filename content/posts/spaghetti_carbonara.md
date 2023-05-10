@@ -3,7 +3,7 @@ title: "Spaghetti alla Carbonara"
 draft: false
 ---
 
-**Zutaten:**
+# Zutaten
 - 500g Spaghetti
 - 100g Parmesan
 - 125g Schinkenwürfel
@@ -13,7 +13,7 @@ draft: false
 - Olivenöl
 - Gemüsebrühe
 
-**Zubereitung:**
+# Zubereitung
 1. Einen großen Topf mit Wasser und etwas Salz für die Spaghetti zum Kochen bringen.
 2. Die Knoblauchzehen schälen und in Scheiben schneiden.
 3. Das Olivenöl in einer großen Pfanne / Wok erhitzen und den Knoblauch zusammen mit dem Schinken darin anbraten.

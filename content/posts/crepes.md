@@ -5,7 +5,7 @@ draft: false
 
 Die Menge reicht für etwa 3 hungrige Personen.
 
-**Zutaten:**
+# Zutaten
 - 4 Eier
 - 500ml Milch
 - 1 Prise Salz
@@ -16,7 +16,7 @@ Die Menge reicht für etwa 3 hungrige Personen.
     - oder 200g von einem der obigen Mehle und 50g Vollkornmehl
 - Butter
 
-**Zubereitung:**
+# Zubereitung
 1. Die ersten vier Zutaten in einer Schüssel mit einem Schneebesen gut verrühren.
 2. Nun das Mehl unterrühren.
 3. Die Crêpes mit Butter in einer Pfanne ausbacken.

@@ -5,7 +5,7 @@ draft: false
 
 Menge für eine mittelgroße Schüssel.
 
-**Zutaten:**
+# Zutaten
 - 250g Farfalle
 - 100g getrocknete Tomaten in Öl und in Streifen geschnitten
 - 100g Rucola
@@ -17,7 +17,7 @@ Menge für eine mittelgroße Schüssel.
 - 1/2TL Chili
 - 2 Messerspitzen Pfeffer
 
-**Zubereitung:**
+# Zubereitung
 1. Nudeln al dente kochen, abtropfen lassen, kalt abspülen und 1 EL Olivenöl unterrühren.
 2. Die Pinienkerne in einer Pfanne bei niedriger bis mittlerer Hitze goldbraun anbraten.
 3. Die Frühlingszwiebeln in feine Scheiben schneiden und mit den Tomatenstreifen, dem Rucola, den Pinienkernen und dem Oregano zur Pasta geben. 

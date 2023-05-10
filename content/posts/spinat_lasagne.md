@@ -5,7 +5,7 @@ draft: false
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.
 
-**Zutaten:**
+# Zutaten
 - 500g Spinat
 - 1 Zwiebel
 - Etwa 100g Butter
@@ -15,7 +15,7 @@ Die Menge reicht für eine mittelgroße bis große Auflaufform.
 - 150g Fetakäse
 - Lasagneplatten
 
-**Zubereitung:**
+# Zubereitung
 1. Die Auflaufform mit Butter ausstreichen.
 2. Die Zwiebel in kleine Würfel geschnitten in 50g Butter andünsten.
 3. Den Spinat zu der angedünsteten Zwiebel geben und mit Muskat und Salz würzen.

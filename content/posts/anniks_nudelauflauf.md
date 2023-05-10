@@ -5,7 +5,7 @@ draft: false
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.
 
-**Zutaten:**
+# Zutaten
 - 300g Nudeln
 - 200g geriebenen Käse
 - 150g gekochten Schinken
@@ -15,7 +15,7 @@ Die Menge reicht für eine mittelgroße bis große Auflaufform.
 - Muskat
 - Parmesan
 
-**Zubereitung:**
+# Zubereitung
 1. Die Nudeln kochen und den Schinken in kleine Rechtecke schneiden.
 2. Nun die Nudeln abwechselnd mit dem Schinken und dem Käse in eine Auflaufform schichten.
 3. Die Eier mit der Crème fraîche, einer Prise Salz und Muskat verrühren und über die Nudeln gießen.
