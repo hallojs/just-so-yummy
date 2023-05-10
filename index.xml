@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rezepte</title><link>https://just-so-yummy.de/</link><description>Recent content on Rezepte</description><generator>Hugo -- gohugo.io</generator><language>de-de</language><atom:link href="https://just-so-yummy.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Annik's Nudelauflauf</title><link>https://just-so-yummy.de/anniks-nudelauflauf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/anniks-nudelauflauf/</guid><description>&lt;p>Die Menge reicht für eine mittelgroße bis große Auflaufform.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>300g Nudeln&lt;/li>
 &lt;li>200g geriebenen Käse&lt;/li>
@@ -10,7 +10,7 @@
 &lt;li>Muskat&lt;/li>
 &lt;li>Parmesan&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Die Nudeln kochen und den Schinken in kleine Rechtecke schneiden.&lt;/li>
 &lt;li>Nun die Nudeln abwechselnd mit dem Schinken und dem Käse in eine Auflaufform schichten.&lt;/li>
@@ -18,7 +18,7 @@
 &lt;li>Den Parmesan darüber streuen und bei 200°C für etwa 15-20 Minuten backen.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Baguette</title><link>https://just-so-yummy.de/baguette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/baguette/</guid><description>&lt;p>Die Menge reicht für 2 Baguettes.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>300ml lauwarmes Wasser&lt;/li>
 &lt;li>15g frische Hefe&lt;/li>
@@ -26,7 +26,7 @@
 &lt;li>380g Weizenmehl (Typ 550)&lt;/li>
 &lt;li>7g Salz&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Wasser, Hefe und Zucker in eine Schüssel geben und verrühren.&lt;/li>
 &lt;li>Mehl und Salz hinzugeben und zu einem glatten Teig kneten.&lt;/li>
@@ -35,7 +35,7 @@
 &lt;li>Die Baguettes mit Mehl bestäuben und etwa 25 Minuten bei 240°C Unter-/Oberhitze backen.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Crêpes</title><link>https://just-so-yummy.de/cr%C3%AApes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/cr%C3%AApes/</guid><description>&lt;p>Die Menge reicht für etwa 3 hungrige Personen.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>4 Eier&lt;/li>
 &lt;li>500ml Milch&lt;/li>
@@ -50,7 +50,7 @@
 &lt;/li>
 &lt;li>Butter&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Die ersten vier Zutaten in einer Schüssel mit einem Schneebesen gut verrühren.&lt;/li>
 &lt;li>Nun das Mehl unterrühren.&lt;/li>
@@ -58,7 +58,7 @@
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p>
 &lt;p>&lt;em>PS: Die Pfanne ist noch heiß&amp;hellip; einen Apfel in kleine Spalten schneiden und mit Vanillezucker (und Zimt) in Butter schwenken.&lt;/em>&lt;/p></description></item><item><title>Gemüse im Wok</title><link>https://just-so-yummy.de/gem%C3%BCse-im-wok/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/gem%C3%BCse-im-wok/</guid><description>&lt;p>Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>Ein Streifen Schweinefilet&lt;/li>
 &lt;li>4-5 Karotten&lt;/li>
@@ -82,7 +82,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung Wok:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung-im-wok">Zubereitung im Wok&lt;/h1>
 &lt;ol>
 &lt;li>Die Karotten stifteln und zusammen mit einer gehackten Zwiebel in Erdnussöl dünsten.&lt;/li>
 &lt;li>Nun die Bambussprossen und Sojabohnenkeimlinge ergänzen und im Wok köcheln lassen.&lt;/li>
@@ -90,7 +90,7 @@
 &lt;li>Sobald die Brokkoli-Röschen die gewünschte Feste haben, die Soße aus der Pfanne unterrühren und die Erdnüsse ergänzen.&lt;/li>
 &lt;li>Mit Reis oder Nudeln servieren.&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>Zubereitung Soße (zusätzlich Pfanne):&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung-der-soße-zusätzliche-pfanne">Zubereitung der Soße (zusätzliche Pfanne)&lt;/h1>
 &lt;ol>
 &lt;li>Schweinefilet in feine Streifen schneiden und in Curry und Paprikapulver wenden.&lt;/li>
 &lt;li>Schweinefilet in einer Pfanne in Erdnussöl anbraten und anschließend mit Sojasoße ablöschen.&lt;/li>
@@ -98,7 +98,7 @@
 &lt;li>Abschließend die Soße mit Speisestärke andicken.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Hähnchen Stifado</title><link>https://just-so-yummy.de/h%C3%A4hnchen-stifado/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/h%C3%A4hnchen-stifado/</guid><description>&lt;p>Die Menge reicht für 5-6 Portionen.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>400g Zwiebeln&lt;/li>
 &lt;li>700g Hähnchenbrustfilet&lt;/li>
@@ -111,7 +111,7 @@
 &lt;li>Reis&lt;/li>
 &lt;li>2 Knoblauchzehen (optional)&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Das Fleisch in mundgerechte Würfel schneiden und mit dem Öl in einem Schmortopf unter einem Deckel braun anbraten.&lt;/li>
 &lt;li>Die Zwiebeln in grobe, den Knoblauch in feine Würfel schneiden und zum Fleisch geben.&lt;/li>
@@ -122,7 +122,7 @@
 &lt;li>Das Stifado mit dem Reis servieren.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Italienischer Nudelsalat</title><link>https://just-so-yummy.de/italienischer-nudelsalat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/italienischer-nudelsalat/</guid><description>&lt;p>Menge für eine mittelgroße Schüssel.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>250g Farfalle&lt;/li>
 &lt;li>100g getrocknete Tomaten in Öl und in Streifen geschnitten&lt;/li>
@@ -135,7 +135,7 @@
 &lt;li>1/2TL Chili&lt;/li>
 &lt;li>2 Messerspitzen Pfeffer&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Nudeln al dente kochen, abtropfen lassen, kalt abspülen und 1 EL Olivenöl unterrühren.&lt;/li>
 &lt;li>Die Pinienkerne in einer Pfanne bei niedriger bis mittlerer Hitze goldbraun anbraten.&lt;/li>
@@ -143,7 +143,7 @@
 &lt;li>Für das Dressing Olivenöl, gepressten Knoblauch, Chili und Pfeffer vermengen und unter den Salat heben.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Lasagne</title><link>https://just-so-yummy.de/lasagne/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/lasagne/</guid><description>&lt;p>Folgende Mengenangaben reichen für eine mittelgroße bis große Auflaufform.&lt;/p>
-&lt;p>&lt;strong>Für die Tomatensauce:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-die-tomatensauce">Zutaten für die Tomatensauce&lt;/h1>
 &lt;ul>
 &lt;li>1 große Zwiebel&lt;/li>
 &lt;li>2 Zehen Knoblauch&lt;/li>
@@ -156,7 +156,7 @@
 &lt;li>Pfeffer&lt;/li>
 &lt;li>Zucker&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Für die Béchamelsauce:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-die-béchamelsauce">Zutaten für die Béchamelsauce&lt;/h1>
 &lt;ul>
 &lt;li>2EL Butter&lt;/li>
 &lt;li>3 gestrichene EL Weizenmehl&lt;/li>
@@ -164,21 +164,21 @@
 &lt;li>Salz&lt;/li>
 &lt;li>Muskat&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Sonstiges:&lt;/strong>&lt;/p>
+&lt;h1 id="sonstige-zutaten">Sonstige Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>Butter&lt;/li>
 &lt;li>Lasagneplatten&lt;/li>
 &lt;li>Geriebenen Mozzarella&lt;/li>
 &lt;li>Optional: Parmesan&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung Tomatensauce:&lt;/strong>
-Zwiebeln und Knoblauch in kleine Würfel schneiden und mit Öl in einer (großen!) Pfanne bei niedriger bis mittlerer Hitze goldbraun anbraten. Nun das Hackfleisch hinzugeben, durchbraten und anschließend mit dem Wein ablöschen. Sobald der Wein fast vollständig verkocht ist, das Tomatenmark hinzugeben und angehen lassen. Nun das Wasser und die Brühe hinzugeben und die Soße unter einem Deckel wenige Minuten kochen lassen. Anschließend mit Pfeffer, Salz und einer Prise Zucker würzen.&lt;/p>
-&lt;p>&lt;strong>Zubereitung Béchamelsauce:&lt;/strong>
-Die Butter in einem (kleinen) Topf zergehen lassen und das Mehl einrühren. Unter Rühren nach und nach die Milch hinzugeben. Anschließend mit Salz und Muskat würzen und unter ständigem Rühren aufkochen lassen.&lt;/p>
-&lt;p>&lt;strong>Zubereitung Lasagne:&lt;/strong>
-Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit Lasagne-Platten - Béchamelsauce - Tomatensoße - Käse schichten. Die oberste Schicht kann wahlweise mit Parmesan oder Mozzarella enden. Beim Schichten beachten, dass die Lasagne-Platten ausreichend mit Flüssigkeit bedeckt sind, um im Ofen zu garen. Anschießend die Lasagne im vorgeheizten Ofen bei ca. 180°C für ca. 20 Minuten backen. Mit einer Gabel kann vor der Entnahme aus dem Ofen getestet werden, ob die Lasagne-Platten bereits gar sind.&lt;/p>
+&lt;h1 id="zubereitung-der-tomatensauce">Zubereitung der Tomatensauce&lt;/h1>
+&lt;p>Zwiebeln und Knoblauch in kleine Würfel schneiden und mit Öl in einer (großen!) Pfanne bei niedriger bis mittlerer Hitze goldbraun anbraten. Nun das Hackfleisch hinzugeben, durchbraten und anschließend mit dem Wein ablöschen. Sobald der Wein fast vollständig verkocht ist, das Tomatenmark hinzugeben und angehen lassen. Nun das Wasser und die Brühe hinzugeben und die Soße unter einem Deckel wenige Minuten kochen lassen. Anschließend mit Pfeffer, Salz und einer Prise Zucker würzen.&lt;/p>
+&lt;h1 id="zubereitung-der-béchamelsauce">Zubereitung der Béchamelsauce&lt;/h1>
+&lt;p>Die Butter in einem (kleinen) Topf zergehen lassen und das Mehl einrühren. Unter Rühren nach und nach die Milch hinzugeben. Anschließend mit Salz und Muskat würzen und unter ständigem Rühren aufkochen lassen.&lt;/p>
+&lt;h1 id="zubereitung-der-lasagne">Zubereitung der Lasagne&lt;/h1>
+&lt;p>Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit Lasagne-Platten - Béchamelsauce - Tomatensoße - Käse schichten. Die oberste Schicht kann wahlweise mit Parmesan oder Mozzarella enden. Beim Schichten beachten, dass die Lasagne-Platten ausreichend mit Flüssigkeit bedeckt sind, um im Ofen zu garen. Anschießend die Lasagne im vorgeheizten Ofen bei ca. 180°C für ca. 20 Minuten backen. Mit einer Gabel kann vor der Entnahme aus dem Ofen getestet werden, ob die Lasagne-Platten bereits gar sind.&lt;/p>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Mandelhörnchen</title><link>https://just-so-yummy.de/mandelh%C3%B6rnchen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/mandelh%C3%B6rnchen/</guid><description>&lt;p>Folgende Mengenangaben reichen für etwa ein Ofenblech.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>200g Marzipanrohmasse&lt;/li>
 &lt;li>100g Mandelblättchen&lt;/li>
@@ -186,7 +186,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>1 Eiweiß&lt;/li>
 &lt;li>100g Zucker&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Backofen auf 200°C vorheizen (Umluft 180°C).&lt;/li>
 &lt;li>Marzipan mit Zucker und Eiweiß gründlich vermengen. Mit nassen Händen aus der Masse eine Rolle formen und ich gleich große Stücke teilen. Diese in kleine Hörnchen formen und in Mandelblättchen wälzen.&lt;/li>
@@ -194,7 +194,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Im letzten Schritt die Enden der ausgekühlten Hörnchen in erwärmte Kuchenglasur tauchen.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Pesto alla Genovese</title><link>https://just-so-yummy.de/pesto-alla-genovese/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/pesto-alla-genovese/</guid><description>&lt;p>Folgende Mengenangaben reichen etwa für ein Einmachglas.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>100g Basilikum (ohne Stiel) Blätter (25g entsprechen etwa einem Töpfchen)&lt;/li>
 &lt;li>100g Parmesan (frisch gerieben)&lt;/li>
@@ -203,14 +203,14 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>1 TL grobes Meersalz&lt;/li>
 &lt;li>240ml natives Olivenöl&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Pinienkerne bei kleiner bis mittlerer Hitze in einer Pfanne anrösten, bis sie leicht braun sind.&lt;/li>
 &lt;li>Basilikum, Salz, Knoblauch und angeröstete Pinienkerne in einen Messbecher geben, mit Olivenöl füllen und mit dem Pürierstab zerkleinern.&lt;/li>
 &lt;li>Parmesan ergänzen.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Pizza</title><link>https://just-so-yummy.de/pizza/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/pizza/</guid><description>&lt;p>Folgende Mengenangaben reichen je nach Größe und Dicke des ausgerollten Teiges für 5-6 Pizzen.&lt;/p>
-&lt;p>&lt;strong>Für den Teig:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-den-teig">Zutaten für den Teig&lt;/h1>
 &lt;ul>
 &lt;li>800g Mehl&lt;/li>
 &lt;li>2Pkg(14g) Trockenhefe &lt;em>(1Pkg Hefe für Mengen Mehl &amp;lt; 500g)&lt;/em>&lt;/li>
@@ -219,7 +219,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>400ml lauwarmes Wasser &lt;em>(2 Teile Mehl, 1 Teil Wasser)&lt;/em>&lt;/li>
 &lt;li>24ml Olivenöl &lt;em>(3ml auf 100g Mehl)&lt;/em>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Für die Tomatensauce:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-die-tomatensauce">Zutaten für die Tomatensauce&lt;/h1>
 &lt;ul>
 &lt;li>2 Zehen Knoblauch&lt;/li>
 &lt;li>Einen Bund frisches Basilikum&lt;/li>
@@ -229,21 +229,21 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Salz&lt;/li>
 &lt;li>Pfeffer&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Für den Belag:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-den-belag">Zutaten für den Belag&lt;/h1>
 &lt;ul>
 &lt;li>Mozzarella &lt;em>(Buffalo Mozzarella)&lt;/em> 5 Packungen&lt;/li>
 &lt;li>Kreativität&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung Teig:&lt;/strong>
-Rühre den Zucker und die Hefe in das lauwarme Wasser. Gib dem Wasser-Hefe-Mix etwas Zeit und füge anschließend das Olivenöl hinzu. Nimm dir eine ausreichend große Schüssel und vermenge das Mehl, das Salz und die Wassermischung miteinander (Knethaken und Rührgerät). Knete den Teig anschließend weitere 10 Minuten mit den Händen durch. Nun muss der Teig 45 Minuten ruhen. Lege dazu ein feuchtes Küchentuch über die Schale und stelle sie an einen warmen Ort.&lt;/p>
-&lt;p>&lt;strong>Zubereitung Soße:&lt;/strong>
-Schäle die Knoblauchzehen und hacke sie anschließend in feine Würfel. Zupfe die Blätter des Basilikum von den Stängeln und hacke sie klein. Erhitze einen kleinen Topf auf niedriger bis mittlerer Hitze und dünste den Knoblauch in ein wenig Olivenöl bis dieses Goldbraun wird. Füge das gehackte Basilikum sowie die gehackten und passierten Tomaten hinzu und würze die Soße mit Salz und Pfeffer. Lass die Soße etwa 20 min. weiter bei kleiner bis mittlerer Hitze köcheln und zerdrücke die Tomaten mit einem Kochlöffel. Schmecke anschließend ab und würze gegebenenfalls nach.&lt;/p>
-&lt;p>&lt;strong>Zubereitung der Pizza:&lt;/strong>
-Wenn du magst, kannst du etwas von dem Teig einfrieren. Forme den Rest des Teiges zu gleichmäßig großen Bällen. Frierst du nichts von dem Teig ein solltest du etwa 5-6 Bälle erhalten. Zum Ausrollen einer Pizza drücke einen Teig-Ball flach und Rolle ihn mit einem Nudelholz dünn aus. Bestreiche den Teig mit der Soße und belege die Pizza nach deinen Vorlieben.&lt;/p>
-&lt;p>&lt;strong>Backen der Pizza:&lt;/strong>
-Backe die Pizza bei 250°C&lt;/p>
+&lt;h1 id="zubereitung-des-teiges">Zubereitung des Teiges&lt;/h1>
+&lt;p>Rühre den Zucker und die Hefe in das lauwarme Wasser. Gib dem Wasser-Hefe-Mix etwas Zeit und füge anschließend das Olivenöl hinzu. Nimm dir eine ausreichend große Schüssel und vermenge das Mehl, das Salz und die Wassermischung miteinander (Knethaken und Rührgerät). Knete den Teig anschließend weitere 10 Minuten mit den Händen durch. Nun muss der Teig 45 Minuten ruhen. Lege dazu ein feuchtes Küchentuch über die Schale und stelle sie an einen warmen Ort.&lt;/p>
+&lt;h1 id="zubereitung-der-soße">Zubereitung der Soße&lt;/h1>
+&lt;p>Schäle die Knoblauchzehen und hacke sie anschließend in feine Würfel. Zupfe die Blätter des Basilikum von den Stängeln und hacke sie klein. Erhitze einen kleinen Topf auf niedriger bis mittlerer Hitze und dünste den Knoblauch in ein wenig Olivenöl bis dieses Goldbraun wird. Füge das gehackte Basilikum sowie die gehackten und passierten Tomaten hinzu und würze die Soße mit Salz und Pfeffer. Lass die Soße etwa 20 min. weiter bei kleiner bis mittlerer Hitze köcheln und zerdrücke die Tomaten mit einem Kochlöffel. Schmecke anschließend ab und würze gegebenenfalls nach.&lt;/p>
+&lt;h1 id="zubereitung-der-pizza">Zubereitung der Pizza&lt;/h1>
+&lt;p>Wenn du magst, kannst du etwas von dem Teig einfrieren. Forme den Rest des Teiges zu gleichmäßig großen Bällen. Frierst du nichts von dem Teig ein solltest du etwa 5-6 Bälle erhalten. Zum Ausrollen einer Pizza drücke einen Teig-Ball flach und Rolle ihn mit einem Nudelholz dünn aus. Bestreiche den Teig mit der Soße und belege die Pizza nach deinen Vorlieben.&lt;/p>
+&lt;h1 id="backen-der-pizza">Backen der Pizza&lt;/h1>
+&lt;p>Backe die Pizza bei 250°C&lt;/p>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Rote Linsen Lasagne</title><link>https://just-so-yummy.de/rote-linsen-lasagne/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/rote-linsen-lasagne/</guid><description>&lt;p>Folgende Mengenangaben reichen für eine mittelgroße bis große Auflaufform.&lt;/p>
-&lt;p>&lt;strong>Für die Tomatensauce:&lt;/strong>&lt;/p>
+&lt;h1 id="zutatem-für-die-tomatensauce">Zutatem für die Tomatensauce&lt;/h1>
 &lt;ul>
 &lt;li>125g Rote Linsen&lt;/li>
 &lt;li>1 große Zwiebel&lt;/li>
@@ -255,7 +255,7 @@ Backe die Pizza bei 250°C&lt;/p>
 &lt;li>Salz&lt;/li>
 &lt;li>Pfeffer&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Für die Béchamelsauce:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-die-béchamelsauce">Zutaten für die Béchamelsauce&lt;/h1>
 &lt;ul>
 &lt;li>2EL Butter&lt;/li>
 &lt;li>3 gestrichene EL Weizenmehl&lt;/li>
@@ -263,21 +263,21 @@ Backe die Pizza bei 250°C&lt;/p>
 &lt;li>Salz&lt;/li>
 &lt;li>Muskat&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Sonstiges:&lt;/strong>&lt;/p>
+&lt;h1 id="sonstige-zutaten">Sonstige Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>Butter&lt;/li>
 &lt;li>Lasagneplatten&lt;/li>
 &lt;li>Geriebenen Mozzarella&lt;/li>
 &lt;li>Optional: Parmesan&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung Tomatensauce:&lt;/strong>
-Zwiebeln, Knoblauch und Karotten in kleine Würfel schneiden und mit Öl in einer (großen!) Pfanne bei niedriger bis mittlerer Hitze goldbraun anbraten. Anschließend das Tomatenmark hinzugeben und angehen lassen. Nun die Linsen, die passierten Tomaten sowie die Brühe hinzugeben und die Soße unter einem Deckel 15-20 Minuten köcheln lassen. Abschließend mit Pfeffer und Salz würzen.&lt;/p>
-&lt;p>&lt;strong>Zubereitung Béchamelsauce:&lt;/strong>
-Die Butter in einem (kleinen) Topf zergehen lassen und das Mehl einrühren. Unter Rühren nach und nach die Milch hinzugeben. Anschließend mit Salz und Muskat würzen und unter ständigem Rühren aufkochen lassen.&lt;/p>
-&lt;p>&lt;strong>Zubereitung Lasagne:&lt;/strong>
-Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit Lasagne-Platten - Béchamelsauce - Tomatensoße - Käse schichten. Die oberste Schicht kann wahlweise mit Parmesan oder Mozzarella enden. Beim Schichten beachten, dass die Lasagne-Platten ausreichend mit Flüssigkeit bedeckt sind, um im Ofen zu garen. Anschießend die Lasagne im vorgeheizten Ofen bei ca. 180°C für ca. 20 Minuten backen. Mit einer Gabel kann vor der Entnahme aus dem Ofen getestet werden, ob die Lasagne-Platten bereits gar sind.&lt;/p>
+&lt;h1 id="zubereitung-der-tomatensauce">Zubereitung der Tomatensauce&lt;/h1>
+&lt;p>Zwiebeln, Knoblauch und Karotten in kleine Würfel schneiden und mit Öl in einer (großen!) Pfanne bei niedriger bis mittlerer Hitze goldbraun anbraten. Anschließend das Tomatenmark hinzugeben und angehen lassen. Nun die Linsen, die passierten Tomaten sowie die Brühe hinzugeben und die Soße unter einem Deckel 15-20 Minuten köcheln lassen. Abschließend mit Pfeffer und Salz würzen.&lt;/p>
+&lt;h1 id="zubereitung-der-béchamelsauce">Zubereitung der Béchamelsauce&lt;/h1>
+&lt;p>Die Butter in einem (kleinen) Topf zergehen lassen und das Mehl einrühren. Unter Rühren nach und nach die Milch hinzugeben. Anschließend mit Salz und Muskat würzen und unter ständigem Rühren aufkochen lassen.&lt;/p>
+&lt;h1 id="zubereitung-der-lasagne">Zubereitung der Lasagne&lt;/h1>
+&lt;p>Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit Lasagne-Platten - Béchamelsauce - Tomatensoße - Käse schichten. Die oberste Schicht kann wahlweise mit Parmesan oder Mozzarella enden. Beim Schichten beachten, dass die Lasagne-Platten ausreichend mit Flüssigkeit bedeckt sind, um im Ofen zu garen. Anschießend die Lasagne im vorgeheizten Ofen bei ca. 180°C für ca. 20 Minuten backen. Mit einer Gabel kann vor der Entnahme aus dem Ofen getestet werden, ob die Lasagne-Platten bereits gar sind.&lt;/p>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Sanft gegarte Schweinemedaillons an Kartoffelgratin</title><link>https://just-so-yummy.de/sanft-gegarte-schweinemedaillons-an-kartoffelgratin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/sanft-gegarte-schweinemedaillons-an-kartoffelgratin/</guid><description>&lt;p>Die Menge reicht für eine mittelgroße bis große Auflaufform.&lt;/p>
-&lt;p>&lt;strong>Zutaten für die Medaillons:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-die-medaillons">Zutaten für die Medaillons&lt;/h1>
 &lt;ul>
 &lt;li>700g Schweinefilet&lt;/li>
 &lt;li>40ml Wasser&lt;/li>
@@ -286,7 +286,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Salz&lt;/li>
 &lt;li>Pfeffer&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zutaten für Gratin:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-das-gratin">Zutaten für das Gratin&lt;/h1>
 &lt;ul>
 &lt;li>1200g festkochende Kartoffeln&lt;/li>
 &lt;li>1 Knoblauchzehen&lt;/li>
@@ -298,7 +298,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Salz&lt;/li>
 &lt;li>Pfeffer&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung der Medaillons:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung-der-medaillons">Zubereitung der Medaillons&lt;/h1>
 &lt;ol>
 &lt;li>Das Schweinefilet im Ganzen scharf von allen Seiten in wenig Öl (hoch erhitzbar) in einer Edelstahlpfanne anbraten.&lt;/li>
 &lt;li>Das Schweinefilet auf einer Servierplatte bei 100°C Ober-/Unterhitze im Backofen etwa 50 Minuten sanft garen.&lt;/li>
@@ -307,7 +307,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Das Schweinefilet aus dem Ofen nehmen und in etwa 4cm dicke Medaillons schneiden.&lt;/li>
 &lt;li>Die Sauce in eine Sauciere geben und zu den Medaillons servieren.&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>Zubereitung des Gratins:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung-des-gratins">Zubereitung des Gratins&lt;/h1>
 &lt;ol>
 &lt;li>Auflaufform mit Butter ausstreichen.&lt;/li>
 &lt;li>Knoblauch schälen und in feine Würfel gehackt gleichmäßig in der Auflaufform verteilen.&lt;/li>
@@ -318,7 +318,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Das Gratin bei 180°C für etwa eine Stunde in den Ofen geben. Die Backzeit kann je nach Dicke der Kartoffelscheiben variieren (Gabeltest).&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Silvester Salat</title><link>https://just-so-yummy.de/silvester-salat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/silvester-salat/</guid><description>&lt;p>Die Menge reicht für eine mittelgroße bis große Schüssel.&lt;/p>
-&lt;p>&lt;strong>Für den Salat:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-den-salat">Zutaten für den Salat&lt;/h1>
 &lt;ul>
 &lt;li>200g Feldsalat&lt;/li>
 &lt;li>Ein Granatapfel&lt;/li>
@@ -326,14 +326,14 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>125g gehobelten Parmesan&lt;/li>
 &lt;li>Eine Handvoll Rucola&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Für das Dressing:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten-für-das-dressing">Zutaten für das Dressing&lt;/h1>
 &lt;ul>
 &lt;li>4EL süßes Fruchtessig (z.B. Himbeeressig)&lt;/li>
 &lt;li>8EL Olivenöl&lt;/li>
 &lt;li>1EL mittelscharfen Senf&lt;/li>
 &lt;li>Etwas Salz und Pfeffer&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Den Feldsalat waschen und trockenschleudern.&lt;/li>
 &lt;li>Den Granatapfel halbieren und die Kerne herauslösen.&lt;/li>
@@ -341,7 +341,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Für das Dressing alle Zutaten in eine kleine Schüssel geben und gut verrühren.&lt;/li>
 &lt;li>Das Dressing gleichmäßig unter den Salat heben.&lt;/li>
 &lt;/ol>
-&lt;p>Guten Appetit!&lt;/p></description></item><item><title>Spaghetti alla Carbonara</title><link>https://just-so-yummy.de/spaghetti-alla-carbonara/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/spaghetti-alla-carbonara/</guid><description>&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;p>Guten Appetit!&lt;/p></description></item><item><title>Spaghetti alla Carbonara</title><link>https://just-so-yummy.de/spaghetti-alla-carbonara/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/spaghetti-alla-carbonara/</guid><description>&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>500g Spaghetti&lt;/li>
 &lt;li>100g Parmesan&lt;/li>
@@ -352,7 +352,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Olivenöl&lt;/li>
 &lt;li>Gemüsebrühe&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Einen großen Topf mit Wasser und etwas Salz für die Spaghetti zum Kochen bringen.&lt;/li>
 &lt;li>Die Knoblauchzehen schälen und in Scheiben schneiden.&lt;/li>
@@ -366,7 +366,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p>
 &lt;p>PS: Anstelle von Milch kann etwas von dem Kochwasser verwendet werden. Ist der Parmesan gerieben, muss die Soße nicht püriert werden.&lt;/p></description></item><item><title>Spinatlasagne</title><link>https://just-so-yummy.de/spinatlasagne/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/spinatlasagne/</guid><description>&lt;p>Die Menge reicht für eine mittelgroße bis große Auflaufform.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>500g Spinat&lt;/li>
 &lt;li>1 Zwiebel&lt;/li>
@@ -377,7 +377,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>150g Fetakäse&lt;/li>
 &lt;li>Lasagneplatten&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Die Auflaufform mit Butter ausstreichen.&lt;/li>
 &lt;li>Die Zwiebel in kleine Würfel geschnitten in 50g Butter andünsten.&lt;/li>
@@ -389,7 +389,7 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Die Lasagne bei 180-190°C für etwa 40 Minuten in den Ofen geben.&lt;/li>
 &lt;/ol>
 &lt;p>Guten Appetit!&lt;/p></description></item><item><title>Tomaten Risotto</title><link>https://just-so-yummy.de/tomaten-risotto/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/tomaten-risotto/</guid><description>&lt;p>Große Menge, evtl. halbieren.&lt;/p>
-&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>500g Risotto Reis&lt;/li>
 &lt;li>4 Zwiebeln&lt;/li>
@@ -401,21 +401,21 @@ Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit L
 &lt;li>Mozzarella (optional)&lt;/li>
 &lt;li>Parmesan (optional)&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Knoblauch und Zwiebeln in feine Würfel hacken und in einem ausreichend großen Topf mit dem Olivenöl gold-braun anbraten.&lt;/li>
 &lt;li>Den Reis hinzugeben und unter rühren bis zum glasig werden dünsten.&lt;/li>
 &lt;li>Anschließend die passierte Tomate und die Gemüsebrühe ergänzen und das Risotto in einem abgedeckten Topf unter geringer bis mittlerer Hitze einkochen.&lt;/li>
 &lt;/ol>
 &lt;p>Optional den Parmesan unter den Reis heben und mit Mozzarella Streifen anrichten.&lt;/p>
-&lt;p>Guten Appetit!&lt;/p></description></item><item><title>Trofie alla Genovese</title><link>https://just-so-yummy.de/trofie-alla-genovese/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/trofie-alla-genovese/</guid><description>&lt;p>&lt;strong>Zutaten:&lt;/strong>&lt;/p>
+&lt;p>Guten Appetit!&lt;/p></description></item><item><title>Trofie alla Genovese</title><link>https://just-so-yummy.de/trofie-alla-genovese/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/trofie-alla-genovese/</guid><description>&lt;h1 id="zutaten">Zutaten&lt;/h1>
 &lt;ul>
 &lt;li>500g Pasta&lt;/li>
 &lt;li>400g Bohnen&lt;/li>
 &lt;li>400g Kartoffeln&lt;/li>
 &lt;li>1/2 Portion &lt;a href="https://just-so-yummy.de/pesto-alla-genovese/">Pesto alla Genovese&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Zubereitung:&lt;/strong>&lt;/p>
+&lt;h1 id="zubereitung">Zubereitung&lt;/h1>
 &lt;ol>
 &lt;li>Im ersten Schritt eine halbe Portion Pesto alla Genovese herstellen.&lt;/li>
 &lt;li>Anschließend die Bohnen waschen und halbieren. Nun die Kartoffeln schälen und in mundgerechte Stücke zerteilen.&lt;/li>
