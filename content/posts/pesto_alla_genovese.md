@@ -14,7 +14,7 @@ Folgende Mengenangaben reichen etwa für ein Einmachglas.
 - 240ml natives Olivenöl
 
 # Zubereitung
-1. Pinienkerne bei kleiner bis mittlerer Hitze in einer Pfanne anrösten, bis sie leicht braun sind.
+1. Pinienkerne bei kleiner bis mittlerer Hitze in einer Pfanne leicht braun anrösten.
 2. Basilikum, Salz, Knoblauch und angeröstete Pinienkerne in einen Messbecher geben, mit Olivenöl füllen und mit dem Pürierstab zerkleinern.
 3. Parmesan ergänzen.
 
