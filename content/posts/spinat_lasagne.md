@@ -1,6 +1,7 @@
 ---
 title: "Spinatlasagne"
 draft: false
+image: /images/spinat_lasagne.webp
 ---
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.

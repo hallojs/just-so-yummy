@@ -1,6 +1,7 @@
 ---
 title: "Italienischer Nudelsalat"
 draft: false
+image: /images/italienischer_nudelsalat.webp
 ---
 
 Menge für eine mittelgroße Schüssel.

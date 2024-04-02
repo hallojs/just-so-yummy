@@ -1,6 +1,7 @@
 ---
 title: "Frühlingssalat"
 draft: false
+image: /images/fruehlingssalat.webp
 ---
 
 Die Menge reicht für eine mittelgroße Schüssel.

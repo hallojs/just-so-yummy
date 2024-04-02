@@ -1,6 +1,7 @@
 ---
 title: "Hähnchen Stifado"
 draft: false
+image: /images/haehnchen_stifado.webp
 ---
 
 Die Menge reicht für 5-6 Portionen.

@@ -1,6 +1,7 @@
 ---
 title: "Annik's Nudelauflauf"
 draft: false
+image: /images/anniks_nudelauflauf.webp
 ---
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.

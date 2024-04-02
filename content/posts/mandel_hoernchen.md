@@ -1,6 +1,7 @@
 ---
 title: "Mandelhörnchen"
 draft: false
+image: /images/mandel_hoernchen.webp
 ---
 
 Folgende Mengenangaben reichen für etwa ein Ofenblech.

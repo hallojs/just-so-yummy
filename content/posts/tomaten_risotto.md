@@ -1,6 +1,7 @@
 ---
 title: "Tomaten Risotto"
 draft: false
+image: /images/tomaten_risotto.webp
 ---
 
 Große Menge, evtl. halbieren.

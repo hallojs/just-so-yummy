@@ -1,6 +1,7 @@
 ---
 title: "Baguette"
 draft: false
+image: /images/baguette.webp
 ---
 
 Die Menge reicht für 2 Baguettes.

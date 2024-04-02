@@ -1,6 +1,7 @@
 ---
 title: "Mum's Käsekuchen"
 draft: false
+image: /images/kaese_kuchen.webp
 ---
 
 Menge reicht für eine 28cm große Springform.

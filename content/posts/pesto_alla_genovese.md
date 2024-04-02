@@ -1,6 +1,7 @@
 ---
 title: "Pesto alla Genovese"
 draft: false
+image: /images/pesto_alla_genovese.webp
 ---
 
 Folgende Mengenangaben reichen etwa für ein Einmachglas.

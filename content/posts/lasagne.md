@@ -1,6 +1,7 @@
 ---
 title: "Lasagne"
 draft: false
+image: /images/lasagne.webp
 ---
 
 Folgende Mengenangaben reichen für eine mittelgroße bis große Auflaufform.

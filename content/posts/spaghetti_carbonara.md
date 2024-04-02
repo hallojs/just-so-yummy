@@ -1,6 +1,7 @@
 ---
 title: "Spaghetti alla Carbonara"
 draft: false
+image: /images/spaghetti_carbonara.webp
 ---
 
 # Zutaten

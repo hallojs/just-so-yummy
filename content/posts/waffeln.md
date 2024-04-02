@@ -1,6 +1,7 @@
 ---
 title: "Waffeln"
 draft: false
+image: /images/waffeln.webp
 ---
 
 Die Menge reicht für sechs Waffeln.

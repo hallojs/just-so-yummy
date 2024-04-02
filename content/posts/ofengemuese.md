@@ -1,6 +1,7 @@
 ---
 title: "Ofengemüse"
 draft: false
+image: /images/ofengemuese.webp
 ---
 
 # Zutaten für das Gemüse
@@ -37,3 +38,5 @@ draft: false
 - Zucchini: 15 Minuten
 - Paprika: 15 Minuten
 - Schalotten: 15 Minuten
+
+Guten Appetit!

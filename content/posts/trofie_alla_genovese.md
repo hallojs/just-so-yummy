@@ -1,6 +1,7 @@
 ---
 title: "Trofie alla Genovese"
 draft: false
+image: /images/trofie_alla_genovese.webp
 ---
 
 # Zutaten
