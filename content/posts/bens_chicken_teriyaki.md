@@ -1,5 +1,5 @@
 ---
-title: "Bens's Chicken Teriyaki"
+title: "Ben's Chicken Teriyaki"
 draft: false
 image: /images/bens_chicken_teriyaki.webp
 ---
