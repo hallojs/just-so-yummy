@@ -4,8 +4,6 @@ draft: false
 image: /images/crepes.webp
 ---
 
-<!-- ![Yellow Duck](/crepes.png 'Yellow Duck') -->
-
 Die Menge reicht für etwa 3 hungrige Personen.
 
 # Zutaten
