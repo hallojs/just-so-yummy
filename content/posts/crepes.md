@@ -10,7 +10,7 @@ Die Menge reicht für etwa 3 hungrige Personen.
 - 4 Eier
 - 500ml Milch
 - 1 Prise Salz
-- 2 EL Öl
+- 2EL Öl
 - 250g Mehl
     - Entweder 250g Weizenmehl (Typ 405),
     - 250g Dinkelmehl (Typ 630),

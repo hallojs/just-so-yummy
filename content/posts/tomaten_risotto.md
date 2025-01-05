@@ -10,9 +10,9 @@ Große Menge, evtl. halbieren.
 - 500g Risotto Reis
 - 4 Zwiebeln
 - 1 1/2 Knoblauchzehen (optional)
-- 4 EL Olivenöl
+- 4EL Olivenöl
 - 500g passierte Tomate
-- 1,5 L Gemüsebrühe
+- 1,5L Gemüsebrühe
 - Salz und Pfeffer
 - Mozzarella (optional)
 - Parmesan (optional)

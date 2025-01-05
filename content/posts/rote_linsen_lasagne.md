@@ -11,7 +11,7 @@ Folgende Mengenangaben reichen für eine mittelgroße bis große Auflaufform.
 - 1 große Zwiebel
 - 2 Zehen Knoblauch
 - 3 Karotten
-- 1 EL Tomatenmark
+- 1EL Tomatenmark
 - 500ml Passierte Tomaten
 - 300ml Gemüsebrühe
 - Salz

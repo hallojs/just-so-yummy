@@ -10,7 +10,7 @@ Die Menge reicht für eine mittelgroße Schüssel.
 - 100g Feldsalat
 - 2 Orangen
 - 2 Schalotten
-- 2 EL Rotwein
+- 2EL Rotwein
 - 2EL Pinienkerne
 - 2EL Ahornsirup
 - 2EL Olivenöl

@@ -10,8 +10,8 @@ Die Menge reicht für 5-6 Portionen.
 - 400g Zwiebeln
 - 700g Hähnchenbrustfilet
 - Getrockneter Rosmarin
-- 1-2 EL Öl
-- 1 EL Tomatenmark
+- 1-2EL Öl
+- 1EL Tomatenmark
 - 1L Passierte Tomaten
 - 250ml Gemüsebrühe
 - Salz und Pfeffer
