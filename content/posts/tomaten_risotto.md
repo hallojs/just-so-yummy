@@ -2,6 +2,7 @@
 title: "Tomaten Risotto"
 draft: false
 image: /images/tomaten_risotto.webp
+categories: ["hauptgerichte", "pasta-pizza-risotto", "vegetarisch-vegan"]
 ---
 
 Große Menge, evtl. halbieren.

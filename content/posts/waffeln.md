@@ -2,6 +2,7 @@
 title: "Waffeln"
 draft: false
 image: /images/waffeln.webp
+categories: ["suesses-gebaeck", "vegetarisch-vegan"]
 ---
 
 Die Menge reicht für sechs Waffeln.

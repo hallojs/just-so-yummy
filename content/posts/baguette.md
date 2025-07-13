@@ -2,6 +2,7 @@
 title: "Baguette"
 draft: false
 image: /images/baguette.webp
+categories: ["snacks-brot-herzhaftes-gebaeck", "vegetarisch-vegan"]
 ---
 
 Die Menge reicht für 2 Baguettes.

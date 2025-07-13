@@ -2,6 +2,7 @@
 title: "Birger's Kartoffelsuppe"
 draft: false
 # image: /images/anniks_nudelauflauf.webp
+categories: ["hauptgerichte"]
 ---
 
 Die Menge reicht für etwa 6 Portionen.

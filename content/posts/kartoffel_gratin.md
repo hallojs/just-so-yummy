@@ -2,6 +2,7 @@
 title: "Sanft gegarte Schweinemedaillons an Kartoffelgratin"
 draft: false
 image: /images/kartoffel_gratin.webp
+categories: ["hauptgerichte"]
 ---
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.

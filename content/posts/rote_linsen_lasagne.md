@@ -2,6 +2,7 @@
 title: "Rote Linsen Lasagne"
 draft: false
 image: /images/rote_linsen_lasagne.webp
+categories: ["hauptgerichte", "pasta-pizza-risotto", "vegetarisch-vegan"]
 ---
 
 Folgende Mengenangaben reichen für eine mittelgroße bis große Auflaufform.

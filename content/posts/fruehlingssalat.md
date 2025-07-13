@@ -2,6 +2,7 @@
 title: "Frühlingssalat"
 draft: false
 image: /images/fruehlingssalat.webp
+categories: ["salate-beilagen", "vegetarisch-vegan"]
 ---
 
 Die Menge reicht für eine mittelgroße Schüssel.

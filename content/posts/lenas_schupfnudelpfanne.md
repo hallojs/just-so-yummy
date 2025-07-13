@@ -2,6 +2,7 @@
 title: "Lena's Schupfnudelpfanne"
 draft: false
 image: /images/lenas_schupfnudelpfanne.webp
+categories: ["hauptgerichte"]
 ---
 
 Die Menge reicht für eine große Pfanne.

@@ -2,6 +2,7 @@
 title: "Gemüse im Wok"
 draft: false
 image: /images/wok_gemuese.webp
+categories: ["hauptgerichte"]
 ---
 
 Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.

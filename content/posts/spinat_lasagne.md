@@ -2,6 +2,7 @@
 title: "Spinatlasagne"
 draft: false
 image: /images/spinat_lasagne.webp
+categories: ["hauptgerichte", "pasta-pizza-risotto", "vegetarisch-vegan"]
 ---
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.

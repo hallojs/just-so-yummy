@@ -1,5 +1,9 @@
 ---
-title: "Schafskäsecreme"
+title: "Schafskäsecreme"
+draft: false
+image: /images/schafskaesecreme.webp
+categories: ["salate-beilagen", "vegetarisch-vegan"]
+---itle: "Schafskäsecreme"
 draft: false
 image: /images/schafskaesecreme.webp
 ---

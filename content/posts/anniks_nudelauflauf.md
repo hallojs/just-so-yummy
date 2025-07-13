@@ -2,6 +2,7 @@
 title: "Annik's Nudelauflauf"
 draft: false
 image: /images/anniks_nudelauflauf.webp
+categories: ["hauptgerichte"]
 ---
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.

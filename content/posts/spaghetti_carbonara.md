@@ -2,6 +2,7 @@
 title: "Spaghetti alla Carbonara"
 draft: false
 image: /images/spaghetti_carbonara.webp
+categories: ["hauptgerichte", "pasta-pizza-risotto"]
 ---
 
 # Zutaten

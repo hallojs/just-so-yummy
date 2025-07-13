@@ -2,6 +2,7 @@
 title: "Pesto alla Genovese"
 draft: false
 image: /images/pesto_alla_genovese.webp
+categories: ["pasta-pizza-risotto", "vegetarisch-vegan"]
 ---
 
 Folgende Mengenangaben reichen etwa für ein Einmachglas.

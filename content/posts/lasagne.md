@@ -2,6 +2,7 @@
 title: "Lasagne"
 draft: false
 image: /images/lasagne.webp
+categories: ["hauptgerichte", "pasta-pizza-risotto"]
 ---
 
 Folgende Mengenangaben reichen für eine mittelgroße bis große Auflaufform.

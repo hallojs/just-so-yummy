@@ -2,6 +2,7 @@
 title: "Brotbratlinge"
 draft: false
 image: /images/brotbratlinge.webp
+categories: ["hauptgerichte", "snacks-brot-herzhaftes-gebaeck"]
 ---
 
 Das Rezept zum verwerten alter Brotreste. Wenn möglich Brot und Brötchen vor dem trocknen in schmale Scheiben schneiden.

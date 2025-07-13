@@ -2,6 +2,7 @@
 title: "Crêpes"
 draft: false
 image: /images/crepes.webp
+categories: ["hauptgerichte", "suesses-gebaeck", "vegetarisch-vegan"]
 ---
 
 Die Menge reicht für etwa 3 hungrige Personen.

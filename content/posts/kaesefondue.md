@@ -2,6 +2,7 @@
 title: "Käsefondue"
 draft: false
 image: /images/kaesefondue.webp
+categories: ["hauptgerichte", "snacks-brot-herzhaftes-gebaeck", "vegetarisch-vegan"]
 ---
 
 Die Menge reicht für fünf hungrige Personen

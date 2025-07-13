@@ -2,6 +2,7 @@
 title: "Pizza"
 draft: false
 image: /images/pizza.webp
+categories: ["pasta-pizza-risotto", "vegetarisch-vegan"]
 ---
 
 Folgende Mengenangaben reichen je nach Größe und Dicke des ausgerollten Teiges für 5-6 Pizzen.

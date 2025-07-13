@@ -2,6 +2,7 @@
 title: "Mandelhörnchen"
 draft: false
 image: /images/mandel_hoernchen.webp
+categories: ["suesses-gebaeck", "vegetarisch-vegan"]
 ---
 
 Folgende Mengenangaben reichen für etwa ein Ofenblech.

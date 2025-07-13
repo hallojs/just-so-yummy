@@ -3,6 +3,9 @@ languageCode = 'de-de'
 title = 'Rezepte'
 theme = "etch"
 
+[taxonomies]
+  category = "categories"
+
 [params]
   description = "My yummy recipes"
   contact = "Contact: Jonas Sander, jonas.sander(at)t-online.de"
