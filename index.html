@@ -58,6 +58,9 @@
 </a>
 </div>
 </div>
+<div class=search-bar-wrapper>
+<input type=text id=recipe-search placeholder="Rezepte durchsuchen..." autocomplete=off>
+</div>
 <ul id=posts>
 <li>
 <a href=https://just-so-yummy.de/anniks-nudelauflauf/>
@@ -205,6 +208,7 @@ Waffeln
 </a>
 </li>
 </ul>
+<script>document.addEventListener('DOMContentLoaded',function(){var a=document.getElementById('recipe-search'),b=document.getElementById('posts');if(!a||!b)return;a.addEventListener('input',function(){var c=a.value.toLowerCase(),d=b.getElementsByTagName('li');Array.from(d).forEach(function(a){var b=a.textContent||a.innerText;a.style.display=b.toLowerCase().includes(c)?'':'none'})})})</script>
 </main><footer id=footer>
 Contact: Jonas Sander, jonas.sander(at)t-online.de
 </footer>
