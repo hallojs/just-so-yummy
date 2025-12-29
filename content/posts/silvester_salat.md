@@ -3,6 +3,11 @@ title: "Silvester Salat"
 draft: false
 image: /images/silvester_salat.webp
 categories: ["salate-beilagen", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Die Menge reicht für eine mittelgroße bis große Schüssel.

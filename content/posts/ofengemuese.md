@@ -3,6 +3,11 @@ title: "Ofengemüse"
 draft: false
 image: /images/ofengemuese.webp
 categories: ["hauptgerichte", "salate-beilagen", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 # Zutaten für das Gemüse

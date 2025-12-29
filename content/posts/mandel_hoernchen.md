@@ -3,6 +3,11 @@ title: "Mandelhörnchen"
 draft: false
 image: /images/mandel_hoernchen.webp
 categories: ["suesses-gebaeck", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Folgende Mengenangaben reichen für etwa ein Ofenblech.

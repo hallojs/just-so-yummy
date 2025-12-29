@@ -3,6 +3,11 @@ title: "Ben's Chicken Teriyaki"
 draft: false
 image: /images/bens_chicken_teriyaki.webp
 categories: ["hauptgerichte"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Das folgende Rezept reicht für 4 Personen und wird typischerweise mit Reis serviert.

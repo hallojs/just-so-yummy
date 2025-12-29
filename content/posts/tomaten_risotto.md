@@ -3,6 +3,11 @@ title: "Tomaten Risotto"
 draft: false
 image: /images/tomaten_risotto.webp
 categories: ["hauptgerichte", "pasta-pizza-risotto", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Große Menge, evtl. halbieren.

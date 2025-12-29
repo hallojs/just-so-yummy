@@ -3,6 +3,11 @@ title: "Eva's Erdapfelkäs"
 draft: false
 image: /images/evas_erdapfelkaes.webp
 categories: ["salate-beilagen", "snacks-brot-herzhaftes-gebaeck", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Die Menge reicht für 4 Personen.

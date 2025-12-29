@@ -1,11 +1,13 @@
 ---
 title: "Ritter Sport Torte"
 draft: false
-image: /images/ritter_sport_torte.webp
-categories: ["suesses-gebaeck"]
----itle: "Ritter Sport Torte"
-draft: false
 # image: /images/ritter_sport_torte.webp
+categories: ["suesses-gebaeck"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Die Mengenangaben reichen für eine 24cm Springform.

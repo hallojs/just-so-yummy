@@ -7,10 +7,16 @@ theme = "etch"
   category = "categories"
 
 [params]
-  description = "My yummy recipes"
+  description = "Leckere Rezepte zum Nachkochen"
+  author = "Just So Yummy"
   contact = "Contact: Jonas Sander, jonas.sander(at)t-online.de"
   dark = "auto"
   highlight = true
 
 [permalinks]
   posts = "/:title/"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"

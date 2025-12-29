@@ -3,6 +3,11 @@ title: "Spaghetti alla Carbonara"
 draft: false
 image: /images/spaghetti_carbonara.webp
 categories: ["hauptgerichte", "pasta-pizza-risotto"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 # Zutaten

@@ -3,6 +3,11 @@ title: "Waffeln"
 draft: false
 image: /images/waffeln.webp
 categories: ["suesses-gebaeck", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Die Menge reicht für sechs Waffeln.

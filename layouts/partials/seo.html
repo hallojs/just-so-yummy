@@ -1,0 +1,30 @@
+{{- /* Open Graph Meta Tags */ -}}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="Just So Yummy">
+<meta property="og:locale" content="de_DE">
+{{- with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{- end }}
+{{- with .Params.description }}
+<meta property="og:description" content="{{ . }}">
+{{- else }}
+{{- with .Site.Params.description }}
+<meta property="og:description" content="{{ . }}">
+{{- end }}
+{{- end }}
+
+{{- /* Twitter Card Meta Tags */ -}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+{{- with .Params.image }}
+<meta name="twitter:image" content="{{ . | absURL }}">
+{{- end }}
+{{- with .Params.description }}
+<meta name="twitter:description" content="{{ . }}">
+{{- else }}
+{{- with .Site.Params.description }}
+<meta name="twitter:description" content="{{ . }}">
+{{- end }}
+{{- end }}

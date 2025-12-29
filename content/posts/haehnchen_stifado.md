@@ -3,6 +3,11 @@ title: "Hähnchen Stifado"
 draft: false
 image: /images/haehnchen_stifado.webp
 categories: ["hauptgerichte"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Die Menge reicht für 5-6 Portionen.

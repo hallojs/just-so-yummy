@@ -3,6 +3,11 @@ title: "Italienischer Nudelsalat"
 draft: false
 image: /images/italienischer_nudelsalat.webp
 categories: ["salate-beilagen", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Menge für eine mittelgroße Schüssel.

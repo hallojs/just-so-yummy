@@ -3,9 +3,11 @@ title: "Schafskäsecreme"
 draft: false
 image: /images/schafskaesecreme.webp
 categories: ["salate-beilagen", "vegetarisch-vegan"]
----itle: "Schafskäsecreme"
-draft: false
-image: /images/schafskaesecreme.webp
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Schafskäsecreme zu Baguette oder als Dip zum Grillen.

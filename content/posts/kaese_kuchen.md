@@ -3,6 +3,11 @@ title: "Mum's Käsekuchen"
 draft: false
 image: /images/kaese_kuchen.webp
 categories: ["suesses-gebaeck", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Menge reicht für eine 28cm große Springform.

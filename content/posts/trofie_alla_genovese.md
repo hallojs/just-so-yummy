@@ -3,6 +3,11 @@ title: "Trofie alla Genovese"
 draft: false
 image: /images/trofie_alla_genovese.webp
 categories: ["hauptgerichte", "pasta-pizza-risotto", "vegetarisch-vegan"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 # Zutaten

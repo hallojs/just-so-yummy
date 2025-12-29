@@ -3,6 +3,11 @@ title: "Annik's Nudelauflauf"
 draft: false
 image: /images/anniks_nudelauflauf.webp
 categories: ["hauptgerichte"]
+description: ""
+date: ""
+prepTime: ""
+cookTime: ""
+servings: ""
 ---
 
 Die Menge reicht für eine mittelgroße bis große Auflaufform.
