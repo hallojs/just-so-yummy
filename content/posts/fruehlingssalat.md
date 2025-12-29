@@ -20,7 +20,7 @@ Die Menge reicht für eine mittelgroße Schüssel.
 
 # Zubereitung
 1. Feldsalat waschen und in eine große Schüssel geben.
-2. Pinienkerne bei kleiner bis mittlerer Hitze in einer Pfanneleicht braun anrösten.
+2. Pinienkerne bei kleiner bis mittlerer Hitze in einer Pfanne leicht braun anrösten.
 3. Schalotten schälen und in feine Würfel schneiden.
 4. Orange schälen, von weißen Häutchen befreien und in fingerbreite Stücke schneiden.
 5. Rotwein, Ahornsirup, Olivenöl, Salz und Pfeffer zu einem Dressing verrühren.

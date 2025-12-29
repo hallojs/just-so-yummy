@@ -7,7 +7,7 @@ categories: ["hauptgerichte", "pasta-pizza-risotto", "vegetarisch-vegan"]
 
 Folgende Mengenangaben reichen für eine mittelgroße bis große Auflaufform.
  
-# Zutatem für die Tomatensauce
+# Zutaten für die Tomatensauce
 - 125g Rote Linsen
 - 1 große Zwiebel
 - 2 Zehen Knoblauch
@@ -38,6 +38,6 @@ Zwiebeln, Knoblauch und Karotten in kleine Würfel schneiden und mit Öl in eine
 Die Butter in einem (kleinen) Topf zergehen lassen und das Mehl einrühren. Unter Rühren nach und nach die Milch hinzugeben. Anschließend mit Salz und Muskat würzen und unter ständigem Rühren aufkochen lassen.
 
 # Zubereitung der Lasagne
-Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit Lasagne-Platten - Béchamelsauce - Tomatensoße - Käse schichten. Die oberste Schicht kann wahlweise mit Parmesan oder Mozzarella enden. Beim Schichten beachten, dass die Lasagne-Platten ausreichend mit Flüssigkeit bedeckt sind, um im Ofen zu garen. Anschießend die Lasagne im vorgeheizten Ofen bei ca. 180°C für ca. 20 Minuten backen. Mit einer Gabel kann vor der Entnahme aus dem Ofen getestet werden, ob die Lasagne-Platten bereits gar sind.
+Die Auflaufform mit Butter einfetten. Anschließend die Lasagne wiederholt mit Lasagne-Platten - Béchamelsauce - Tomatensoße - Käse schichten. Die oberste Schicht kann wahlweise mit Parmesan oder Mozzarella enden. Beim Schichten beachten, dass die Lasagne-Platten ausreichend mit Flüssigkeit bedeckt sind, um im Ofen zu garen. Anschließend die Lasagne im vorgeheizten Ofen bei ca. 180°C für ca. 20 Minuten backen. Mit einer Gabel kann vor der Entnahme aus dem Ofen getestet werden, ob die Lasagne-Platten bereits gar sind.
 
 Guten Appetit!
