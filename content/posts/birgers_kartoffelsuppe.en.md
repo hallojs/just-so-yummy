@@ -1,7 +1,7 @@
 ---
 title: "Birger's Potato Soup"
 draft: false
-# image: /images/anniks_nudelauflauf.webp
+image: /images/birgers_kartoffelsuppe.webp
 categories: ["hauptgerichte"]
 description: ""
 date: ""

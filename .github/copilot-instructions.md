@@ -118,6 +118,58 @@ The Etch theme has been customized with:
 
 The site deploys automatically via GitHub Actions (`.github/workflows/gh-pages.yml`) when pushing to `main` branch.
 
+## Recipe Image Generation
+
+When creating images for new recipes, follow these guidelines to match the existing style:
+
+### Image Specifications
+
+- **Format**: WebP
+- **Dimensions**: 1792 × 1024 pixels (16:9 aspect ratio)
+- **Location**: `static/images/`
+- **Naming**: `recipe_name.webp` (matching the recipe markdown filename)
+
+### Style Requirements
+
+The recipe images use a **soft watercolor illustration style** with these characteristics:
+
+- Warm, inviting watercolor painting technique
+- Soft background wash that fades to the edges (NO decorative borders or corner ornaments)
+- Full bleed illustration extending to all edges
+- Cozy, hand-painted artistic look
+- Food presented appetizingly with relevant ingredients/garnishes visible
+
+### Image Generation Prompt Template
+
+When generating images with AI tools, use this prompt structure with 3 existing images as style references:
+
+```
+Create a new illustration matching EXACTLY the same style as these three reference images. 
+The subject is: [DETAILED FOOD DESCRIPTION WITH GARNISHES AND PRESENTATION]. 
+Copy the EXACT same: watercolor illustration technique, color warmth, soft background 
+wash style, and overall artistic feel from the reference images. NO decorative borders 
+or corner ornaments - the image should extend to the edges like a full bleed illustration. 
+The new image must look like it belongs to the same series.
+```
+
+**Important settings:**
+- Use 3 existing recipe images as style references (e.g., `lasagne.webp`, `waffeln.webp`, `pizza.webp`)
+- Apply negative prompt: `decorative border, corner ornaments, frame, border decorations, ornamental frame`
+- Aspect ratio: 16:9
+- Resolution: high
+
+### Image Conversion
+
+After generating the image, convert to WebP format at the correct dimensions:
+
+```sh
+# Resize to 1792x1024
+sips -z 1024 1792 /path/to/generated_image.png --out /tmp/resized.png
+
+# Convert to WebP
+cwebp -q 85 /tmp/resized.png -o static/images/recipe_name.webp
+```
+
 ## Code Style
 
 - Use German for German content files, English for English content files

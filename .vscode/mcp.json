@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "nanobanana": {
+      "command": "uvx",
+      "args": ["nanobanana-mcp-server@latest"],
+      "env": {
+        "GEMINI_API_KEY": "${input:gemini-api-key}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "gemini-api-key",
+      "type": "promptString",
+      "description": "Enter your Google Gemini API Key",
+      "password": true
+    }
+  ]
+}

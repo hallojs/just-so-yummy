@@ -1,7 +1,7 @@
 ---
 title: "Ritter Sport Torte"
 draft: false
-# image: /images/ritter_sport_torte.webp
+image: /images/ritter_sport_torte.webp
 categories: ["suesses-gebaeck"]
 description: ""
 date: ""
