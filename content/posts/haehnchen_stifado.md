@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht für 5-6 Portionen.
-
-# Zutaten
+# Zutaten {{< portionen base=5 unit="Portionen" >}}
 - 400g Zwiebeln
 - 700g Hähnchenbrustfilet
 - Getrockneter Rosmarin

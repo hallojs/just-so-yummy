@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This makes six waffles.
-
-# Ingredients
+# Ingredients {{< portionen base=6 unit="Waffles" >}}
 - 175g butter
 - 175g sugar
 - 1 packet vanilla sugar

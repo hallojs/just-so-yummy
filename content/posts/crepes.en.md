@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This makes enough for about 3 hungry people.
-
-# Ingredients
+# Ingredients {{< portionen base=3 unit="People" >}}
 - 4 eggs
 - 500ml milk
 - 1 pinch of salt

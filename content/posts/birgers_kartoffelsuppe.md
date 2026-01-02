@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht für etwa 6 Portionen.
-
-# Zutaten
+# Zutaten {{< portionen base=6 unit="Portionen" >}}
 - 125g ⁠Grobe Schinkenwürfel  
 - ⁠2EL Butter 
 - ⁠Eine Zwiebel

@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This makes about 6 servings.
-
-# Ingredients
+# Ingredients {{< portionen base=6 unit="Servings" >}}
 - 125g coarse ham cubes
 - 2 tbsp butter
 - One onion

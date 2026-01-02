@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Folgende Mengenangaben reichen je nach Größe und Dicke des ausgerollten Teiges für 5-6 Pizzen.
-
-# Zutaten für den Teig
+# Zutaten für den Teig {{< portionen base=5 unit="Pizzen" >}}
 - 800g Mehl
 - 2Pkg(14g) Trockenhefe *(1Pkg Hefe für Mengen Mehl < 500g)*
 - 2TL Salz

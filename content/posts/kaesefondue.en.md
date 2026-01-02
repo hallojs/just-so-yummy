@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This serves five hungry people.
-
-# Ingredients
+# Ingredients {{< portionen base=5 unit="People" >}}
 - 300ml dry white wine
 - 300g Emmental cheese
 - 300g Gruyère cheese

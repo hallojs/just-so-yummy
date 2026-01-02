@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht für sechs Waffeln.
-
-# Zutaten
+# Zutaten {{< portionen base=6 unit="Waffeln" >}}
 - 175g Butter
 - 175g Zucker
 - 1 Päckchen Vanillezucker

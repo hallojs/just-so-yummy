@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht für etwa 3 hungrige Personen.
-
-# Zutaten
+# Zutaten {{< portionen base=3 unit="Personen" >}}
 - 4 Eier
 - 500ml Milch
 - 1 Prise Salz

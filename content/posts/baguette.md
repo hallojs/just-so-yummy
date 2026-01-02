@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht für 2 Baguettes.
-
-# Zutaten
+# Zutaten {{< portionen base=2 unit="Baguettes" >}}
 - 300ml lauwarmes Wasser
 - 15g frische Hefe
 - 5g Zucker

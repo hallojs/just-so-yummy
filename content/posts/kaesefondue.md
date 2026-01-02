@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht für fünf hungrige Personen
-
-# Zutaten
+# Zutaten {{< portionen base=5 unit="Personen" >}}
 - 300ml trockenen Weißwein
 - 300g Emmentaler
 - 300g Gruyère

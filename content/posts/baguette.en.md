@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This makes 2 baguettes.
-
-# Ingredients
+# Ingredients {{< portionen base=2 unit="Baguettes" >}}
 - 300ml lukewarm water
 - 15g fresh yeast
 - 5g sugar

@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This recipe serves 4 people and is typically served with rice.
-
-# Ingredients for the Sauce
+# Ingredients for the Sauce {{< portionen base=4 unit="Servings" >}}
 - 3 tbsp soy sauce
 - 3 tbsp brown sugar
 - 1 tsp apple cider vinegar

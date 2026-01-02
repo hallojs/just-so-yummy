@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-The following quantities make 5-6 pizzas depending on the size and thickness of the rolled dough.
-
-# Ingredients for the Dough
+# Ingredients for the Dough {{< portionen base=5 unit="Pizzas" >}}
 - 800g flour
 - 2 packets (14g) dry yeast *(1 packet of yeast for flour amounts < 500g)*
 - 2 tsp salt

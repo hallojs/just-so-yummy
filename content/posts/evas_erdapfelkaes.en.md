@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This serves 4 people.
-
-# Ingredients
+# Ingredients {{< portionen base=4 unit="People" >}}
 - 4 floury potatoes
 - 1-2 splashes of cream
 - 1 container sour cream

@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.
-
-# Zutaten
+# Zutaten {{< portionen base=5 unit="Personen" >}}
 - Ein Streifen Schweinefilet
 - 4-5 Karotten
 - Ein Glas Bambussprossen

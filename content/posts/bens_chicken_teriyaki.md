@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Das folgende Rezept reicht für 4 Personen und wird typischerweise mit Reis serviert.
-
-# Zutaten für die Soße
+# Zutaten für die Soße {{< portionen base=4 unit="Personen" >}}
 - 3EL Sojasoße
 - 3EL brauner Zucker
 - 1TL Apfelessig

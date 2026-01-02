@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This serves up to 5 people with enough noodles or rice.
-
-# Ingredients
+# Ingredients {{< portionen base=5 unit="People" >}}
 - One strip of pork tenderloin
 - 4-5 carrots
 - One jar bamboo shoots

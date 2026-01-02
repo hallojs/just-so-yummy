@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-Die Menge reicht für 4 Personen.
-
-# Zutaten
+# Zutaten {{< portionen base=4 unit="Personen" >}}
 - 4 mehlig kochende Kartoffeln
 - 1-2 Schuss Sahne
 - 1 Becher Sauerrahm

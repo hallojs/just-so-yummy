@@ -10,9 +10,7 @@ cookTime: ""
 servings: ""
 ---
 
-This makes 5-6 servings.
-
-# Ingredients
+# Ingredients {{< portionen base=5 unit="Servings" >}}
 - 400g onions
 - 700g chicken breast fillet
 - Dried rosemary
