@@ -17,8 +17,250 @@
 &lt;li&gt;Die Eier mit der Crème fraîche, einer Prise Salz und Muskat verrühren und über die Nudeln gießen.&lt;/li&gt;
 &lt;li&gt;Den Parmesan darüber streuen und bei 200°C für etwa 15-20 Minuten backen.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Baguette</title><link>https://just-so-yummy.de/baguette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/baguette/</guid><description>&lt;p&gt;Die Menge reicht für 2 Baguettes.&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Baguette</title><link>https://just-so-yummy.de/baguette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/baguette/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode22s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="2"&gt;
+&lt;label&gt;Baguettes:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;2&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;300ml lauwarmes Wasser&lt;/li&gt;
 &lt;li&gt;15g frische Hefe&lt;/li&gt;
@@ -35,8 +277,250 @@
 &lt;li&gt;Teig in zwei gleich große Stücke teilen, zu Baguettes formen und auf ein Baguetteblech mit Backpapier geben.&lt;/li&gt;
 &lt;li&gt;Die Baguettes mit Mehl bestäuben und etwa 25 Minuten bei 240°C Unter-/Oberhitze backen.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Ben's Chicken Teriyaki</title><link>https://just-so-yummy.de/bens-chicken-teriyaki/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/bens-chicken-teriyaki/</guid><description>&lt;p&gt;Das folgende Rezept reicht für 4 Personen und wird typischerweise mit Reis serviert.&lt;/p&gt;
-&lt;h1 id="zutaten-für-die-soße"&gt;Zutaten für die Soße&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Ben's Chicken Teriyaki</title><link>https://just-so-yummy.de/bens-chicken-teriyaki/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/bens-chicken-teriyaki/</guid><description>&lt;h1 id="zutaten-für-die-soße-hahahugoshortcode24s0hbhb"&gt;Zutaten für die Soße &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="4"&gt;
+&lt;label&gt;Personen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;4&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;3EL Sojasoße&lt;/li&gt;
 &lt;li&gt;3EL brauner Zucker&lt;/li&gt;
@@ -63,8 +547,250 @@
 &lt;li&gt;Die Teriyaki Soße hinzugeben und 3-4 Minuten bei mittlerer Hitze köcheln lassen, bis die Soße eingedickt ist.&lt;/li&gt;
 &lt;li&gt;Mit Sesamkörnern und gehackten Frühlingszwiebeln garnieren.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Birger's Kartoffelsuppe</title><link>https://just-so-yummy.de/birgers-kartoffelsuppe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/birgers-kartoffelsuppe/</guid><description>&lt;p&gt;Die Menge reicht für etwa 6 Portionen.&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Birger's Kartoffelsuppe</title><link>https://just-so-yummy.de/birgers-kartoffelsuppe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/birgers-kartoffelsuppe/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode26s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="6"&gt;
+&lt;label&gt;Portionen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;6&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;125g ⁠Grobe Schinkenwürfel&lt;/li&gt;
 &lt;li&gt;⁠2EL Butter&lt;/li&gt;
@@ -113,8 +839,250 @@
 &lt;li&gt;Etwas Öl in einer Pfanne erhitzen und die Bratlinge portionsweise ausbacken. Sollte die Masse zu flüssig sein, noch etwas Mehl hinzugeben.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Die Bratlinge schmecken am besten mit Apfelmus und lassen sich auch hervorragend einfrieren.&lt;/p&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Crêpes</title><link>https://just-so-yummy.de/cr%C3%AApes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/cr%C3%AApes/</guid><description>&lt;p&gt;Die Menge reicht für etwa 3 hungrige Personen.&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Crêpes</title><link>https://just-so-yummy.de/cr%C3%AApes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/cr%C3%AApes/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode30s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="3"&gt;
+&lt;label&gt;Personen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;3&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;4 Eier&lt;/li&gt;
 &lt;li&gt;500ml Milch&lt;/li&gt;
@@ -136,8 +1104,250 @@
 &lt;li&gt;Die Crêpes mit Butter in einer Pfanne ausbacken.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Guten Appetit!&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PS: Die Pfanne ist noch heiß&amp;hellip; einen Apfel in kleine Spalten schneiden und mit Vanillezucker (und Zimt) in Butter schwenken.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Eva's Erdapfelkäs</title><link>https://just-so-yummy.de/evas-erdapfelk%C3%A4s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/evas-erdapfelk%C3%A4s/</guid><description>&lt;p&gt;Die Menge reicht für 4 Personen.&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;PS: Die Pfanne ist noch heiß&amp;hellip; einen Apfel in kleine Spalten schneiden und mit Vanillezucker (und Zimt) in Butter schwenken.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Eva's Erdapfelkäs</title><link>https://just-so-yummy.de/evas-erdapfelk%C3%A4s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/evas-erdapfelk%C3%A4s/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode32s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="4"&gt;
+&lt;label&gt;Personen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;4&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;4 mehlig kochende Kartoffeln&lt;/li&gt;
 &lt;li&gt;1-2 Schuss Sahne&lt;/li&gt;
@@ -176,8 +1386,250 @@
 &lt;li&gt;Rotwein, Ahornsirup, Olivenöl, Salz und Pfeffer zu einem Dressing verrühren.&lt;/li&gt;
 &lt;li&gt;Schalotten und Orangen zum Feldsalat geben und das Dressing unterheben.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Gemüse im Wok</title><link>https://just-so-yummy.de/gem%C3%BCse-im-wok/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/gem%C3%BCse-im-wok/</guid><description>&lt;p&gt;Die Menge reicht mit ausreichend Nudeln oder Reis für bis zu 5 Personen.&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Gemüse im Wok</title><link>https://just-so-yummy.de/gem%C3%BCse-im-wok/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/gem%C3%BCse-im-wok/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode76s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="5"&gt;
+&lt;label&gt;Personen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;5&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Ein Streifen Schweinefilet&lt;/li&gt;
 &lt;li&gt;4-5 Karotten&lt;/li&gt;
@@ -216,8 +1668,250 @@
 &lt;li&gt;Nun die Hühnerbrühe ergänzen und mit Sambal Olek, Koriander, Kreuzkümmel und 5 Gewürzpulver würzen.&lt;/li&gt;
 &lt;li&gt;Abschließend die Soße mit Speisestärke andicken.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Hähnchen Stifado</title><link>https://just-so-yummy.de/h%C3%A4hnchen-stifado/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/h%C3%A4hnchen-stifado/</guid><description>&lt;p&gt;Die Menge reicht für 5-6 Portionen.&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Hähnchen Stifado</title><link>https://just-so-yummy.de/h%C3%A4hnchen-stifado/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/h%C3%A4hnchen-stifado/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode36s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="5"&gt;
+&lt;label&gt;Portionen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;5&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;400g Zwiebeln&lt;/li&gt;
 &lt;li&gt;700g Hähnchenbrustfilet&lt;/li&gt;
@@ -261,8 +1955,250 @@
 &lt;li&gt;Die Frühlingszwiebeln in feine Scheiben schneiden und mit den Tomatenstreifen, dem Rucola, den Pinienkernen und dem Oregano zur Pasta geben.&lt;/li&gt;
 &lt;li&gt;Für das Dressing Olivenöl, gepressten Knoblauch, Chili und Pfeffer vermengen und unter den Salat heben.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Käsefondue</title><link>https://just-so-yummy.de/k%C3%A4sefondue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/k%C3%A4sefondue/</guid><description>&lt;p&gt;Die Menge reicht für fünf hungrige Personen&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Käsefondue</title><link>https://just-so-yummy.de/k%C3%A4sefondue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/k%C3%A4sefondue/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode42s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="5"&gt;
+&lt;label&gt;Personen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;5&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;300ml trockenen Weißwein&lt;/li&gt;
 &lt;li&gt;300g Emmentaler&lt;/li&gt;
@@ -430,8 +2366,250 @@
 &lt;li&gt;Basilikum, Salz, Knoblauch und angeröstete Pinienkerne in einen Messbecher geben, mit Olivenöl füllen und mit dem Pürierstab zerkleinern.&lt;/li&gt;
 &lt;li&gt;Parmesan ergänzen.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Pizza</title><link>https://just-so-yummy.de/pizza/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/pizza/</guid><description>&lt;p&gt;Folgende Mengenangaben reichen je nach Größe und Dicke des ausgerollten Teiges für 5-6 Pizzen.&lt;/p&gt;
-&lt;h1 id="zutaten-für-den-teig"&gt;Zutaten für den Teig&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Pizza</title><link>https://just-so-yummy.de/pizza/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/pizza/</guid><description>&lt;h1 id="zutaten-für-den-teig-hahahugoshortcode56s0hbhb"&gt;Zutaten für den Teig &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="5"&gt;
+&lt;label&gt;Pizzen:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;5&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;800g Mehl&lt;/li&gt;
 &lt;li&gt;2Pkg(14g) Trockenhefe &lt;em&gt;(1Pkg Hefe für Mengen Mehl &amp;lt; 500g)&lt;/em&gt;&lt;/li&gt;
@@ -690,8 +2868,250 @@
 &lt;li&gt;Als nächstes die Kartoffeln, Bohnen und Pasta in einem großen Topf Salzwasser für 10-14, 10-12, und 10 Minuten kochen.&lt;/li&gt;
 &lt;li&gt;Abschließend je nach Geschmack Pesto unterheben.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Waffeln</title><link>https://just-so-yummy.de/waffeln/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/waffeln/</guid><description>&lt;p&gt;Die Menge reicht für sechs Waffeln.&lt;/p&gt;
-&lt;h1 id="zutaten"&gt;Zutaten&lt;/h1&gt;
+&lt;p&gt;Guten Appetit!&lt;/p&gt;</description></item><item><title>Waffeln</title><link>https://just-so-yummy.de/waffeln/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/waffeln/</guid><description>&lt;h1 id="zutaten-hahahugoshortcode74s0hbhb"&gt;Zutaten &lt;style&gt;
+.portion-calculator {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+padding: 0.5rem 1rem;
+margin-left: 1rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+font-family: Dayrom, serif;
+vertical-align: middle;
+position: relative;
+top: -2px;
+}
+.portion-calculator label {
+font-size: 1.6rem;
+color: #313a3d;
+margin: 0;
+}
+.portion-controls {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.portion-btn {
+width: 28px;
+height: 28px;
+border: none;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.9);
+color: #313a3d;
+font-size: 18px;
+font-weight: 400;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+font-family: Dayrom, serif;
+}
+.portion-btn:hover {
+transform: scale(1.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.portion-btn:active {
+transform: scale(0.95);
+}
+.portion-btn:disabled {
+opacity: 0.4;
+cursor: not-allowed;
+}
+.portion-btn:disabled:hover {
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.portion-count {
+font-size: 1.6rem;
+min-width: 1.8rem;
+text-align: center;
+color: #313a3d;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .portion-calculator label,
+html:not([data-theme="light"]) .portion-count {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+}
+html[data-theme="dark"] .portion-calculator {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .portion-calculator label,
+html[data-theme="dark"] .portion-count {
+color: #e0e0e0;
+}
+html[data-theme="dark"] .portion-btn {
+background: rgba(50, 50, 50, 0.9);
+color: #e0e0e0;
+}
+.ingredient-amount {
+transition: all 0.3s ease;
+}
+.ingredient-amount.changed {
+background: rgba(0, 125, 250, 0.12);
+border-radius: 3px;
+padding: 0 3px;
+margin: 0 -3px;
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+}
+html[data-theme="dark"] .ingredient-amount.changed {
+background: rgba(0, 177, 237, 0.2);
+}
+&lt;/style&gt;&lt;div class="portion-calculator" data-base-servings="6"&gt;
+&lt;label&gt;Waffeln:&lt;/label&gt;
+&lt;div class="portion-controls"&gt;
+&lt;button class="portion-btn portion-decrease" aria-label="Decrease"&gt;−&lt;/button&gt;
+&lt;span class="portion-count"&gt;6&lt;/span&gt;
+&lt;button class="portion-btn portion-increase" aria-label="Increase"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(function() {
+if (window.portionCalculatorInitialized) return;
+window.portionCalculatorInitialized = true;
+document.addEventListener('DOMContentLoaded', function() {
+const calculator = document.querySelector('.portion-calculator');
+if (!calculator) return;
+const baseServings = parseInt(calculator.dataset.baseServings) || 4;
+let currentServings = baseServings;
+const countDisplay = calculator.querySelector('.portion-count');
+const decreaseBtn = calculator.querySelector('.portion-decrease');
+const increaseBtn = calculator.querySelector('.portion-increase');
+const ingredientData = [];
+function parseIngredients() {
+const article = document.querySelector('article');
+if (!article) return;
+const listItems = article.querySelectorAll('ul li, ol li');
+listItems.forEach((li, index) =&gt; {
+const text = li.textContent.trim();
+const ingredientPattern = /^([\d.,\/½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]+(?:[\s-]*[\d.,\/]+)?)\s*([a-zA-ZäöüÄÖÜß]+)?\s+(.+)$/;
+const fractionPattern = /^([\d.,\/]+)\s*\/\s*([\d.,]+)\s+(.+)$/;
+const simpleNumberPattern = /^([\d.,]+)\s*([a-zA-ZäöüÄÖÜß]*)\s+(.+)$/;
+let match = text.match(ingredientPattern) || text.match(simpleNumberPattern);
+if (match) {
+const originalAmount = parseAmount(match[1]);
+if (originalAmount &gt; 0) {
+ingredientData.push({
+element: li,
+originalText: text,
+originalAmount: originalAmount,
+match: match
+});
+const amountStr = match[1];
+const newHTML = li.innerHTML.replace(
+amountStr,
+`&lt;span class="ingredient-amount"&gt;${amountStr}&lt;/span&gt;`
+);
+li.innerHTML = newHTML;
+}
+}
+});
+}
+function parseAmount(str) {
+if (!str) return 0;
+str = str.trim();
+const fractionMap = {
+'½': 0.5, '⅓': 1/3, '⅔': 2/3, '¼': 0.25, '¾': 0.75,
+'⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8,
+'⅙': 1/6, '⅚': 5/6, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875
+};
+let total = 0;
+for (const [frac, val] of Object.entries(fractionMap)) {
+if (str.includes(frac)) {
+total += val;
+str = str.replace(frac, '').trim();
+}
+}
+const slashFraction = str.match(/(\d+)\s*\/\s*(\d+)/);
+if (slashFraction) {
+total += parseInt(slashFraction[1]) / parseInt(slashFraction[2]);
+str = str.replace(slashFraction[0], '').trim();
+}
+const num = parseFloat(str.replace(',', '.'));
+if (!isNaN(num)) {
+total += num;
+}
+return total;
+}
+function formatAmount(amount, originalStr) {
+if (amount === Math.floor(amount)) {
+return amount.toString();
+}
+const fractions = [
+{ val: 0.25, str: '¼' },
+{ val: 0.5, str: '½' },
+{ val: 0.75, str: '¾' },
+{ val: 0.333, str: '⅓' },
+{ val: 0.667, str: '⅔' }
+];
+const wholePart = Math.floor(amount);
+const fracPart = amount - wholePart;
+for (const frac of fractions) {
+if (Math.abs(fracPart - frac.val) &lt; 0.05) {
+if (wholePart &gt; 0) {
+return wholePart + frac.str;
+}
+return frac.str;
+}
+}
+const rounded = Math.round(amount * 10) / 10;
+return rounded.toString().replace('.', ',');
+}
+function updateIngredients() {
+const ratio = currentServings / baseServings;
+ingredientData.forEach(data =&gt; {
+const newAmount = data.originalAmount * ratio;
+const amountSpan = data.element.querySelector('.ingredient-amount');
+if (amountSpan) {
+const formattedAmount = formatAmount(newAmount, data.match[1]);
+amountSpan.textContent = formattedAmount;
+if (ratio !== 1) {
+amountSpan.classList.add('changed');
+} else {
+amountSpan.classList.remove('changed');
+}
+}
+});
+decreaseBtn.disabled = currentServings &lt;= 1;
+}
+function updateDisplay() {
+countDisplay.textContent = currentServings;
+updateIngredients();
+}
+decreaseBtn.addEventListener('click', function() {
+if (currentServings &gt; 1) {
+currentServings--;
+updateDisplay();
+}
+});
+increaseBtn.addEventListener('click', function() {
+currentServings++;
+updateDisplay();
+});
+parseIngredients();
+updateDisplay();
+});
+})();
+&lt;/script&gt;
+&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;175g Butter&lt;/li&gt;
 &lt;li&gt;175g Zucker&lt;/li&gt;
