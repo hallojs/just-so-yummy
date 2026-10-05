@@ -33,7 +33,7 @@
 &lt;li&gt;Mix the eggs with the crème fraîche, a pinch of salt and nutmeg, then pour over the pasta.&lt;/li&gt;
 &lt;li&gt;Sprinkle the Parmesan on top and bake at 200°C for about 15-20 minutes.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Enjoy your meal!&lt;/p&gt;</description></item><item><title>Baguette</title><link>https://just-so-yummy.de/en/baguette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/en/baguette/</guid><description>&lt;h1 id="ingredients-hahahugoshortcode21s0hbhb"&gt;Ingredients &lt;style&gt;
+&lt;p&gt;Enjoy your meal!&lt;/p&gt;</description></item><item><title>Baguette</title><link>https://just-so-yummy.de/en/baguette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/en/baguette/</guid><description>&lt;h1 id="ingredients-hahahugoshortcode22s0hbhb"&gt;Ingredients &lt;style&gt;
 .portion-calculator {
 background: #ffffff;
 border: 1px solid #e2e8f0;
@@ -563,7 +563,174 @@ updateDisplay();
 &lt;li&gt;Add the teriyaki sauce and let it simmer for 3-4 minutes on medium heat until the sauce has thickened.&lt;/li&gt;
 &lt;li&gt;Garnish with sesame seeds and chopped spring onions.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Enjoy your meal!&lt;/p&gt;</description></item><item><title>Birger's Potato Soup</title><link>https://just-so-yummy.de/en/birgers-potato-soup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/en/birgers-potato-soup/</guid><description>&lt;h1 id="ingredients-hahahugoshortcode25s0hbhb"&gt;Ingredients &lt;style&gt;
+&lt;p&gt;Enjoy your meal!&lt;/p&gt;
+&lt;style&gt;
+.friend-card {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 1.2rem 1.6rem;
+margin: 3.2rem 0 1.6rem;
+padding: 1.6rem 2rem;
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 12px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+font-family: Dayrom, serif;
+}
+.friend-card-avatars {
+flex: none;
+display: inline-flex;
+}
+.friend-card-avatar {
+width: 52px;
+height: 52px;
+border-radius: 50%;
+border: 3px solid #ffffff;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-size: 26px;
+background: #e6f2fe;
+}
+.friend-card-avatar + .friend-card-avatar {
+margin-left: -16px;
+}
+.friend-card-heart {
+display: inline-block;
+transition: transform 0.2s ease;
+}
+.friend-card-heart:hover {
+transform: scale(1.2);
+}
+.friend-card-floating-heart {
+position: fixed;
+z-index: 1000;
+pointer-events: none;
+font-size: 2rem;
+}
+.friend-card-body {
+flex: 1 1 220px;
+min-width: 0;
+}
+main#content .friend-card-body p {
+margin: 0;
+line-height: 1.5;
+}
+main#content .friend-card-title {
+font-size: 1.9rem;
+color: #313a3d;
+}
+main#content .friend-card-text {
+font-size: 1.5rem;
+color: #5a6468;
+}
+main#content a.friend-card-link {
+flex: none;
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+padding: 0.6rem 1.4rem;
+border-radius: 999px;
+background: #ffcc4d;
+color: #313a3d;
+font-size: 1.5rem;
+white-space: nowrap;
+box-shadow: 0 2px 8px rgba(230, 170, 0, 0.35);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+main#content a.friend-card-link:hover {
+text-decoration: none;
+transform: scale(1.05);
+box-shadow: 0 4px 12px rgba(230, 170, 0, 0.5);
+}
+@media (prefers-color-scheme: dark) {
+html:not([data-theme="light"]) .friend-card {
+background: #1e1e1e;
+border-color: #333;
+}
+html:not([data-theme="light"]) .friend-card-avatar {
+background: #1a343d;
+border-color: #1e1e1e;
+}
+html:not([data-theme="light"]) main#content .friend-card-title {
+color: #e0e0e0;
+}
+html:not([data-theme="light"]) main#content .friend-card-text {
+color: #aaaaaa;
+}
+html:not([data-theme="light"]) main#content a.friend-card-link {
+background: #ffcc4d;
+color: #121212;
+}
+}
+html[data-theme="dark"] .friend-card {
+background: #1e1e1e;
+border-color: #333;
+}
+html[data-theme="dark"] .friend-card-avatar {
+background: #1a343d;
+border-color: #1e1e1e;
+}
+html[data-theme="dark"] main#content .friend-card-title {
+color: #e0e0e0;
+}
+html[data-theme="dark"] main#content .friend-card-text {
+color: #aaaaaa;
+}
+html[data-theme="dark"] main#content a.friend-card-link {
+background: #ffcc4d;
+color: #121212;
+}
+&lt;/style&gt;
+&lt;aside class="friend-card"&gt;
+&lt;span class="friend-card-avatars" aria-hidden="true"&gt;&lt;span class="friend-card-avatar"&gt;👨‍🍳&lt;/span&gt;&lt;span class="friend-card-avatar"&gt;👩‍🍳&lt;/span&gt;&lt;/span&gt;
+&lt;div class="friend-card-body"&gt;
+&lt;p class="friend-card-title"&gt;More from Ben and Alicja &lt;span class="friend-card-heart"&gt;💛&lt;/span&gt;&lt;/p&gt;
+&lt;p class="friend-card-text"&gt;Ben and Alicja have a site with many more delicious recipes!&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="friend-card-link" href="https://benicja.com/" target="_blank" rel="noopener"&gt;benicja.com →&lt;/a&gt;
+&lt;/aside&gt;
+&lt;script&gt;
+(function() {
+if (window.friendCardEggInitialized) return;
+window.friendCardEggInitialized = true;
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.addEventListener('click', function(event) {
+const trigger = event.target.closest('.friend-card-heart, .friend-card-avatars');
+if (!trigger || reducedMotion) return;
+const card = trigger.closest('.friend-card');
+card.querySelectorAll('.friend-card-avatar').forEach((avatar, i) =&gt; {
+avatar.animate([
+{ transform: 'translateY(0) rotate(0)' },
+{ transform: `translateY(-14px) rotate(${i % 2 ? 10 : -10}deg)` },
+{ transform: 'translateY(0) rotate(0)' }
+], { duration: 450, delay: i * 150, easing: 'ease-out' });
+});
+const origin = card.querySelector('.friend-card-heart').getBoundingClientRect();
+for (let i = 0; i &lt; 12; i++) {
+const heart = document.createElement('span');
+heart.className = 'friend-card-floating-heart';
+heart.textContent = '💛';
+heart.style.left = origin.left + 'px';
+heart.style.top = origin.top + 'px';
+document.body.appendChild(heart);
+const drift = (Math.random() - 0.5) * 160;
+const rise = 120 + Math.random() * 120;
+const scale = 0.6 + Math.random() * 0.8;
+heart.animate([
+{ transform: 'translate(0, 0) scale(0.3)', opacity: 1 },
+{ transform: `translate(${drift}px, ${-rise}px) scale(${scale})`, opacity: 0 }
+], {
+duration: 1200 + Math.random() * 800,
+delay: Math.random() * 250,
+easing: 'cubic-bezier(0.2, 0.6, 0.4, 1)',
+fill: 'backwards'
+}).onfinish = () =&gt; heart.remove();
+}
+});
+})();
+&lt;/script&gt;</description></item><item><title>Birger's Potato Soup</title><link>https://just-so-yummy.de/en/birgers-potato-soup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/en/birgers-potato-soup/</guid><description>&lt;h1 id="ingredients-hahahugoshortcode25s0hbhb"&gt;Ingredients &lt;style&gt;
 .portion-calculator {
 background: #ffffff;
 border: 1px solid #e2e8f0;
@@ -2586,7 +2753,7 @@ updateDisplay();
 &lt;li&gt;Next, cook the potatoes, beans and pasta in a large pot of salted water for 10-14, 10-12, and 10 minutes respectively.&lt;/li&gt;
 &lt;li&gt;Finally, fold in pesto to taste.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Enjoy your meal!&lt;/p&gt;</description></item><item><title>Waffles</title><link>https://just-so-yummy.de/en/waffles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/en/waffles/</guid><description>&lt;h1 id="ingredients-hahahugoshortcode73s0hbhb"&gt;Ingredients &lt;style&gt;
+&lt;p&gt;Enjoy your meal!&lt;/p&gt;</description></item><item><title>Waffles</title><link>https://just-so-yummy.de/en/waffles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://just-so-yummy.de/en/waffles/</guid><description>&lt;h1 id="ingredients-hahahugoshortcode74s0hbhb"&gt;Ingredients &lt;style&gt;
 .portion-calculator {
 background: #ffffff;
 border: 1px solid #e2e8f0;
