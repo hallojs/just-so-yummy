@@ -35,3 +35,5 @@ servings: ""
 6. Garnish with sesame seeds and chopped spring onions.
 
 Enjoy your meal!
+
+{{< freund avatar="👨‍🍳 👩‍🍳" name="Ben and Alicja" url="https://benicja.com/" text="Ben and Alicja have a site with many more delicious recipes!" >}}

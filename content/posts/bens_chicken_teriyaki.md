@@ -36,6 +36,8 @@ servings: ""
 
 Guten Appetit!
 
+{{< freund avatar="👨‍🍳 👩‍🍳" name="Ben und Alicja" url="https://benicja.com/" text="Ben und Alicja haben eine Seite mit vielen weiteren leckeren Rezepten!" >}}
+
 
 <!-- Ingredients for Teriyaki Chicken Stir Fry:
 
