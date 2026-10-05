@@ -1,0 +1,234 @@
+<style>
+/* Candlelight theme - a warm, flickering variant of dark mode */
+html.candlelight header#banner .theme-icon-dark {
+    display: none;
+}
+
+html.candlelight header#banner .theme-icon-candle {
+    display: inline;
+}
+
+html.candlelight body {
+    background: #17110c;
+}
+
+html.candlelight main#content,
+html.candlelight main#content p,
+html.candlelight main#content li {
+    color: #f3e2c7;
+}
+
+.candle-glow {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 50% 105%, rgba(255, 147, 41, 0.22), rgba(255, 120, 30, 0.07) 45%, transparent 75%),
+        radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.35));
+    animation: candle-flicker 3s infinite;
+}
+
+.flying-candle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    line-height: 1;
+    pointer-events: none;
+    will-change: transform;
+    filter: drop-shadow(0 0 12px rgba(255, 160, 60, 0.8));
+    animation: candle-flicker 2.3s infinite;
+}
+
+@keyframes candle-flicker {
+    0%, 100% { opacity: 1; }
+    20% { opacity: 0.85; }
+    35% { opacity: 0.95; }
+    55% { opacity: 0.8; }
+    70% { opacity: 1; }
+    85% { opacity: 0.9; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .candle-glow,
+    .flying-candle {
+        animation: none;
+    }
+}
+</style>
+
+<script>
+// Adds candlelight as a fourth step to the theme toggle (auto → light → dark → candlelight)
+// and announces each theme change with a toast
+(function() {
+    const CANDLE_KEY = 'candlelight';
+    const THEME_KEY = 'theme-preference';
+    const root = document.documentElement;
+    const en = root.lang === 'en';
+
+    function storedTheme() {
+        try {
+            return localStorage.getItem(THEME_KEY) || 'auto';
+        } catch (e) {
+            return 'auto';
+        }
+    }
+
+    function isStored() {
+        try {
+            return localStorage.getItem(CANDLE_KEY) === '1' && storedTheme() === 'dark';
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function setCandlelight(on) {
+        root.classList.toggle('candlelight', on);
+        document.querySelectorAll('.candle-glow, .flying-candle').forEach(el => el.remove());
+        cancelAnimationFrame(frame);
+        try {
+            if (on) {
+                localStorage.setItem(CANDLE_KEY, '1');
+            } else {
+                localStorage.removeItem(CANDLE_KEY);
+            }
+        } catch (e) {}
+        if (!on) return;
+        const glow = document.createElement('div');
+        glow.className = 'candle-glow';
+        document.body.appendChild(glow);
+        releaseCandles();
+    }
+
+    // Floating candles, like in the Great Hall: they drift around, bob gently
+    // and float out of the way of the cursor
+    const AVOID_RADIUS = 140;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let frame;
+    let pointer = null;
+
+    document.addEventListener('pointermove', event => {
+        pointer = { x: event.clientX, y: event.clientY };
+    });
+    document.addEventListener('pointerdown', event => {
+        pointer = { x: event.clientX, y: event.clientY };
+    });
+    document.addEventListener('mouseout', event => {
+        if (!event.relatedTarget) pointer = null;
+    });
+
+    function releaseCandles() {
+        const count = window.innerWidth < 600 ? 5 : 9;
+        const candles = [];
+        for (let i = 0; i < count; i++) {
+            const el = document.createElement('span');
+            el.className = 'flying-candle';
+            el.setAttribute('aria-hidden', 'true');
+            el.textContent = '🕯️';
+            const size = 2 + Math.random() * 2;
+            el.style.fontSize = size + 'rem';
+            el.style.animationDelay = -Math.random() * 2.3 + 's';
+            document.body.appendChild(el);
+            candles.push({
+                el: el,
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
+                vx: 0,
+                vy: 0,
+                heading: Math.random() * Math.PI * 2,
+                speed: 10 + size * 5,
+                phase: Math.random() * Math.PI * 2
+            });
+        }
+
+        let last = performance.now();
+        function step(now) {
+            const dt = Math.min((now - last) / 1000, 0.05);
+            last = now;
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            candles.forEach(c => {
+                if (!reducedMotion) {
+                    // Wander: slowly turn and ease towards the drift velocity
+                    c.heading += (Math.random() - 0.5) * 2 * dt;
+                    c.vx += (Math.cos(c.heading) * c.speed - c.vx) * dt;
+                    c.vy += (Math.sin(c.heading) * c.speed - c.vy) * dt;
+
+                    // Float away from the cursor
+                    if (pointer) {
+                        const dx = c.x - pointer.x;
+                        const dy = c.y - pointer.y;
+                        const distance = Math.hypot(dx, dy) || 1;
+                        if (distance < AVOID_RADIUS) {
+                            const push = (1 - distance / AVOID_RADIUS) * 1500 * dt;
+                            c.vx += dx / distance * push;
+                            c.vy += dy / distance * push;
+                        }
+                    }
+
+                    // Turn back softly near the edges
+                    const margin = 40;
+                    if (c.x < margin) c.vx += 60 * dt;
+                    if (c.x > width - margin) c.vx -= 60 * dt;
+                    if (c.y < margin) c.vy += 60 * dt;
+                    if (c.y > height - margin) c.vy -= 60 * dt;
+
+                    c.x = Math.min(Math.max(c.x + c.vx * dt, 0), width);
+                    c.y = Math.min(Math.max(c.y + c.vy * dt, 0), height);
+                }
+                const bob = reducedMotion ? 0 : Math.sin(now / 900 + c.phase) * 6;
+                const sway = reducedMotion ? 0 : Math.sin(now / 1300 + c.phase) * 4;
+                c.el.style.transform = `translate(${c.x}px, ${c.y + bob}px) translate(-50%, -50%) rotate(${sway}deg)`;
+            });
+            if (!reducedMotion) frame = requestAnimationFrame(step);
+        }
+        frame = requestAnimationFrame(step);
+    }
+
+    // Apply before first paint to avoid a flash
+    if (isStored()) {
+        root.classList.add('candlelight');
+    }
+
+    const THEME_NAMES = {
+        auto: en ? 'Auto 🌗' : 'Automatisch 🌗',
+        light: en ? 'Light ☀️' : 'Hell ☀️',
+        dark: en ? 'Dark 🌙' : 'Dunkel 🌙',
+        candlelight: en ? 'Candlelight 🕯️' : 'Kerzenlicht 🕯️'
+    };
+
+    function announceTheme() {
+        const theme = root.classList.contains('candlelight') ? 'candlelight' : storedTheme();
+        window.showToast((en ? 'Theme: ' : 'Farbschema: ') + THEME_NAMES[theme]);
+    }
+
+    // Runs in the capture phase, before the theme's own toggle handler
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('#theme-toggle')) return;
+        // Announce once every handler has applied the new theme
+        setTimeout(announceTheme, 0);
+        if (root.classList.contains('candlelight')) {
+            // Leave candlelight; the theme handler then moves on from dark to auto
+            setCandlelight(false);
+        } else if (storedTheme() === 'dark') {
+            event.stopPropagation();
+            setCandlelight(true);
+        }
+    }, true);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            const icon = document.createElement('span');
+            icon.className = 'theme-icon theme-icon-candle';
+            icon.title = en ? 'Candlelight' : 'Kerzenlicht';
+            icon.textContent = '🕯️';
+            toggleBtn.appendChild(icon);
+        }
+        if (root.classList.contains('candlelight')) {
+            setCandlelight(true);
+        }
+    });
+})();
+</script>

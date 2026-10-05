@@ -53,5 +53,14 @@
     {{- /* Structured Data */ -}}
     {{ partial "structured-data.html" . }}
 
+    {{- /* Toast notifications */ -}}
+    {{ partial "toast.html" . }}
+
+    {{- /* Easter eggs */ -}}
+    {{ partial "easter-eggs.html" . }}
+
+    {{- /* Candlelight theme */ -}}
+    {{ partial "candlelight.html" . }}
+
     <title>{{ .Title }}</title>
 </head>

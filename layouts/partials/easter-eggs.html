@@ -1,0 +1,65 @@
+<style>
+/* Easter eggs - emoji rain */
+.egg-drop {
+    position: fixed;
+    top: -3rem;
+    z-index: 1000;
+    pointer-events: none;
+    animation: egg-fall linear forwards;
+}
+
+@keyframes egg-fall {
+    to {
+        transform: translateY(calc(100vh + 6rem)) rotate(var(--egg-spin));
+    }
+}
+</style>
+
+<script>
+(function() {
+    const en = document.documentElement.lang === 'en';
+    const t = (de, enText) => en ? enText : de;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function emojiRain(emojis, count) {
+        if (reducedMotion) return;
+        for (let i = 0; i < count; i++) {
+            const drop = document.createElement('span');
+            drop.className = 'egg-drop';
+            drop.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.fontSize = (2 + Math.random() * 1.6) + 'rem';
+            drop.style.animationDuration = (2.5 + Math.random() * 2) + 's';
+            drop.style.animationDelay = Math.random() * 1.5 + 's';
+            drop.style.setProperty('--egg-spin', (Math.random() * 720 - 360) + 'deg');
+            drop.addEventListener('animationend', () => drop.remove());
+            document.body.appendChild(drop);
+        }
+    }
+
+    const FOOD = ['🍝', '🥗', '🍰', '🍕', '🥐', '🍓', '🧁', '🥨', '🍜', '🥞'];
+
+    // Party mode in the portion calculator
+    function setUpPartyMode() {
+        document.addEventListener('click', function(event) {
+            const btn = event.target.closest('.portion-btn');
+            if (!btn) return;
+            // Let the calculator update the count first
+            setTimeout(function() {
+                const calculator = btn.closest('.portion-calculator');
+                const count = parseInt(calculator.querySelector('.portion-count').textContent, 10);
+                if (btn.classList.contains('portion-increase') && count >= 20 && count % 10 === 0) {
+                    showToast(t('Das wird eine Party! 🎉', 'Sounds like a party! 🎉'));
+                    emojiRain(FOOD.concat(['🎉', '🎊']), 40);
+                } else if (btn.classList.contains('portion-decrease') && count === 1) {
+                    showToast(t('Ein Candlelight-Dinner für dich? 🕯️', 'Candlelight dinner for one? 🕯️'));
+                }
+            }, 0);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setUpPartyMode();
+    });
+})();
+</script>
