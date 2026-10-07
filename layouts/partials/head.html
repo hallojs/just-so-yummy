@@ -45,6 +45,9 @@
     {{ $css := $resources | resources.Concat "css/style.css" | minify }}
     {{ printf `<link rel="stylesheet" href="%s">` $css.RelPermalink | safeHTML }}
 
+    {{- /* Disable double-tap zoom on touch devices (pinch zoom still works) */ -}}
+    <style>html { touch-action: manipulation; }</style>
+
     <link rel="canonical" href="{{ .Permalink }}" />
 
     {{- /* SEO Meta Tags */ -}}
